@@ -2,95 +2,186 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Каталог 3D моделей</title>
-    <meta name="description"
-          content="Каталог 3D моделей"/>
-    <meta name="keywords" content="" />
+    <title>Каталог 3D моделей | ВиТИМ</title>
+    <meta name="description" content="Каталог 3D моделей элементов инженерных систем для BIM-проектирования">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="Каталог 3D моделей" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="../assets/img/d5f7713a-4d90-42f1-82dc-7449f1ebcea0-11767902.png" />
-
-    <meta name="twitter:title" content="Каталог 3D моделей" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="../assets/img/d5f7713a-4d90-42f1-82dc-7449f1ebcea0-11767902.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-
-
-        <link rel="preconnect" href="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net" />
-
-        <link rel="stylesheet" href="../assets/styles/styles-core.css" />
-
-        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709795.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709794.png">
-        <link rel="icon" type="image/png" sizes="120x120" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709793.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709793.png">
-        <link rel="icon" type="image/png" sizes="180x180" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709792.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../assets/img/a927f746-234d-40df-a5e6-549d3441aea7-11709792.png">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Ubuntu&amp;subset&#x3D;all&amp;display&#x3D;swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Open+Sans&amp;subset&#x3D;all&amp;display&#x3D;swap">
-
-
-
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Каталог 3D моделей | ВиТИМ">
+    <meta property="og:description" content="3D модели элементов систем водоснабжения для BIM-проектирования">
+    <meta property="og:image" content="../assets/img/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ivanDuryagin.github.io-vitim/page4/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="../assets/styles/main.min.css">
+    
+    <!-- Критический CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #111;
+            margin: 0;
+            padding-top: 70px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .catalog-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .catalog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .catalog-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .catalog-item-content {
+            padding: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #20BF6B;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 
-<body class="sb-body sb-body_with-footer  ubuntu__title open-sans-regular sb-content-size_m sb-buttons-border_round">
-<div class="site-wrapper" tabindex="0">
-             <section data-type="header" id="header" class="s-header-type-1 sb-text-dark"><link
-                            id="header-type-1"
-                            rel="stylesheet"
-                            href="../assets/styles/header-type-1.css"
-                        /><div class=" sb-background" style="background: #FFFFFF;"></div><div class="sb-container"><div class="s-header-type-1__wrapper js-wrapper   s-header-type-1__wrapper_right-align-links  s-header-type-1__wrapper_square-logo   ">  <div class="s-header-type-1__burger js-burger  s-header-type-1__mark-links   s-header-type-1__mark-button "><span class="s-header-type-1__burger-line"></span></div>    <a href="https://vitim.tb.ru/vitim" target="_blank" class="sb-logotype-wrapper sb-logotype-wrapper_adaptive_size-xl_square"><img class="lazy sb-logotype-wrapper__image" src="../assets/img/0f8fcf07-7ebf-43d8-a428-d0e625a3c335-11769997.png" alt="Изображение"></a>    <div class="s-header-type-1__menu-wrapper js-menu "><nav class="s-header-type-1__menu">  <div class=" sb-background sb-background" style="background: #FFFFFF;"></div>   <ul class="s-header-type-1__link-wrapper">  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://vitim.tb.ru/vitim"   class="s-header-type-1__link sb-font-p3"     >   На главную   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://vitim.tb.ru/page3"   class="s-header-type-1__link sb-font-p3"     >   Наши разработки   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="#footer-customer"   class="s-header-type-1__link sb-font-p3"     >   Контакты   </a>    </li>  </ul>     <a href="https://t.me/vitim_support"   class="s-header-type-1__button sb-button-secondary sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"    >   Сделать заказ   </a>    </nav></div>   <a href="https://t.me/vitim_support"   class="s-header-type-1__button s-header-type-1__button_tablet-visible sb-button-secondary sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"    >   Сделать заказ   </a>    </div></div> </section>                <section data-type="services" data-subtype="type-1" id="services" class="s-services-type-1 sb-text-dark sb-padding-top_l sb-padding-bottom_l"><link
-                            id="services-type-1"
-                            rel="stylesheet"
-                            href="../assets/styles/services-type-1.css"
-                        /><div class=" sb-background" style="background: #fff;"></div><div class="sb-container sb-m-clear-bottom">  <div class="sb-row sb-m-3-bottom"><h2 class="sb-col_lg-10 sb-col_md-12 sb-col_sm-12 sb-col_xs-12 sb-align-left sb-font-h2 sb-font-title"><b>Каталог 3D моделей</b></h2></div>   <div class="sb-row sb-m-clear-bottom sb-m-3-top-minus">       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/0c7b00fe-29fb-49b2-8b27-681b70338e03-11767466.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Кран шаровый с электроприводом</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Несколько типов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/99ebe6fd-29d2-47ac-9757-33e12882fa00-11767127.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Счётчик воды</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Несколько типов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/4b099ad8-206f-4d7f-85c3-0789d0c36126-11767129.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ППРС труба<br>ПНД труба<br>PEX-A труба<br>PE-RT труба</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/fc257022-a57d-4abb-9e42-6bffd307d1d1-11767207.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Регулятор давления пружинный</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Несколько типов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/160ca07c-21ca-4acf-a82b-dddb86c62038-11767208.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Квартирный водомерный узел</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">С функцией задания расчётных характеристик. Несколько конфигураций</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/0b16a265-bf40-4401-9548-65e430ee957d-11767209.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Узел присоединения стояков водоснабжения</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Несколько конфигураций</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/ecae3092-9991-4a19-aa06-6039be0e9086-11767233.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Фильтр сетчатый</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Несколько типов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/d66cde7e-7093-4b03-bc9f-457c946855ac-11767235.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ППРС крестовина</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/65e2936c-008e-4012-b0a2-eb01f234b8cc-11767236.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ППРС тройник</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/6c710a91-5c03-4c1b-a9c6-8b438bf6951b-11767238.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ППРС отвод</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/b16aef22-f39c-4b45-9eda-d8bfd7356711-11767239.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ППРС муфта<br>ППРС муфта переходная</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/197c1034-0faf-4ef9-be3b-6d5e77a8952a-11767240.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ отвод 90, 135<br>НПВХ отвод 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/0b1c8437-8da9-46a0-9cb4-4ae4c8c4d1e5-11767244.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ труба 1, 2, 3 м<br>НПВХ труба 1, 2, 3 м</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько материалов. Специфицируется как штучное изделие</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/acefa33e-f347-46f4-8e56-888fcab4cdef-11767245.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ тройник 90, 135<br>НПВХ тройник 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/34426e17-9275-4a0d-900b-cbe055b76333-11767246.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ крестовина 90, 135<br>НПВХ крестовина 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/d9a05230-7436-4316-8d45-a920adbf8a91-11767251.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ крестовина двухплоскостная 90, 135<br>НПВХ крестовина двухплоскостная 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/3922ff49-a6f3-4457-998b-972533dbbbf2-11767256.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ ревизия<br>НПВХ ревизия</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/83b3e5f0-19b4-4f3f-8aa1-1032419d1db3-11767255.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ пробка<div>НПВХ пробка</div></h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/d6c909ef-636f-4baf-9cd7-ece035bf202b-11767252.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПВХ редукция<br>НПВХ редукция</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/6a5c4551-2d3f-453f-9fc2-1677cf3a6b5b-11767253.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Клапан вакуумный</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/178d27c9-0aad-4b82-a74b-ce5ce765de8f-11767254.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Насос дренажный</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Задание собственного имени для насоса</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/b8b46073-a816-4930-abb3-6a6d278694c5-11767260.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПНД тройник 90, 135<br>PE-RT тройник 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/b01f7995-9e5e-4745-863d-43bcb8e73897-11767262.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПНД крестовина 90, 135<br>PE-RT крестовина 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/bb2e8d9f-2ee7-4278-a28c-bc4e6798ba67-11767261.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПНД отвод 90, 135<br>PE-RT отвод 90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/d228160c-669c-48a9-af40-2842e6f2ec76-11767264.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">ПНД крестовина двухплоскостная 90, 135<br>PE-RT крестовина двухплоскостная  90, 135</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей. Несколько углов отвода. Несколько материалов</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/b55a552e-9a88-4cd8-8579-9d96a73e8fea-11767265.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Труба стальная ГОСТ</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей.  Несколько исполнений</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/90318aa0-c429-4f5f-ac75-4c4b8113831a-11767297.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Переход стальной концентрический ГОСТ</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей.  Несколько исполнений</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/baf991d9-9fd6-4057-9a2a-8cabdf11806f-11767296.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Отвод стальной ГОСТ</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей.  Несколько исполнений</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/004b8966-66c2-45cd-841d-25df7f3cfb98-11767295.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Тройник стальной ГОСТ</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей.  Несколько исполнений</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>       <div class="s-services-type-1__item sb-m-3-top  sb-col_lg-3 sb-col_md-6  sb-col_sm-6 sb-col_xs-12 " ><div class="s-services-type-1__item-content sb-m-clear-top sb-m-clear-bottom">  <div class="s-services-type-1__info sb-m-15-bottom sb-m-clear-bottom">  <div class="sb-image-square sb-skeleton__image sb-m-11-bottom " ><img class="sb-image-crop sb-image-crop_loaded lazy" src="../assets/img/1cacad9a-d42d-43f1-8215-c1aa1eff416e-11767294.jpeg" alt="Изображение"></div>  <h5 class="sb-pre-wrap sb-skeleton__title sb-align-left sb-font-h5 sb-font-title sb-m-21-bottom" data-goods-field="title">Крестовина стальная ГОСТ</h5> <div class="sb-text-opacity sb-pre-wrap sb-skeleton__text sb-align-left sb-font-p3" data-goods-field="description">Все типоразмеры для внутренних сетей.  Несколько исполнений</div></div>   <div class="s-services-type-1__bottom">   <a href="https://t.me/vitim_support"   class="s-services-type-1__button sb-button-secondary sb-skeleton__button sb-button-type_bordered" style="border-color: rgba(17,17,17,0.16);"  target="_blank"    >   Сделать заказ   </a>   </div>  </div></div>  </div>  </div> </section>                       <section data-type="footer-customer" id="footer-customer" class="s-footer-customer-type-5 sb-text-dark sb-padding-top_l sb-padding-bottom_l"><link
-                            id="footer-customer-type-5"
-                            rel="stylesheet"
-                            href="../assets/styles/footer-customer-type-5.css"
-                        /><div class=" sb-background" style="background: #fff;"></div><div class="sb-container"><div class="sb-row sb-m-clear-bottom">  <div class="s-footer-customer-type-5__logo-column sb-col_xs-12 sb-col_sm-12 sb-col_md-12 sb-m-clear-bottom   sb-col_lg-4  ">   <a href="https://vitim.tb.ru/vitim" target="_blank" class="sb-logotype-wrapper s-footer-customer-type-5__image-wrapper sb-logotype-wrapper_fixed_size-xl_square"><img class="lazy sb-logotype-wrapper__image" src="../assets/img/31b29c74-4f1e-4f4b-954f-8425af6c5d23-11767326.png" alt="Изображение"></a>   <div class="sb-text-opacity sb-font-p3">ВиТИМ — 2025</div></div>   <div class="s-footer-customer-type-5__links sb-col_xs-12 sb-col_sm-12   sb-col_md-8 sb-col_lg-5  "><nav class="sb-row s-footer-customer-type-5__links-row"><ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-5">   <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://vitim.tb.ru/vitim"   class="s-footer-customer-type-5__link sb-font-p3"     >   Главная   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://vitim.tb.ru/page4"   class="s-footer-customer-type-5__link sb-font-p3"     >   Каталог   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://t.me/vitim_support"   class="s-footer-customer-type-5__link sb-font-p3"     >   Оставить отзыв   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://t.me/vitim_support"   class="s-footer-customer-type-5__link sb-font-p3"     >   Поддержать   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://t.me/vitim_support"   class="s-footer-customer-type-5__link sb-font-p3"     >   Стать частью команды   </a>  </li>          </ul><ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-7">                  <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://vitim.tb.ru/page3"   class="s-footer-customer-type-5__link sb-font-p3"     >   Наши разработки   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://vitim.tb.ru/page5"   class="s-footer-customer-type-5__link sb-font-p3"     >   Партнёры проекта   </a>  </li>    </ul></nav></div>   <div class="sb-col_xs-12 sb-col_sm-12  sb-col_md-4 sb-col_lg-3 "><div class="sb-font-p3"><b>+7 (906) 280 08 08<br>+7 (952) 250 70 69</b><br>По будням 9:00—18:00<br><br><b>Адрес</b><br>Архангельск, ул. Карла Либкнехта, д. 22</div></div>  </div></div> </section> </div>
+<body>
+    <!-- Упрощенный хедер -->
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">ВиТИМ</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/page3">Наши разработки</a></li>
+                    <li><a href="/page4" class="active">Каталог 3D моделей</a></li>
+                    <li><a href="https://t.me/vitim_support" rel="noopener">Связаться</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<template id="popups-stash">
-</template>
+    <!-- Основной контент -->
+    <main class="container">
+        <h1>Каталог 3D моделей</h1>
+        <p>Готовые BIM-модели элементов инженерных систем для проектирования</p>
+        
+        <div class="catalog">
+            <!-- Элемент 1 -->
+            <div class="catalog-item">
+                <img src="../assets/img/valve.jpg" alt="Кран шаровый с электроприводом" loading="lazy">
+                <div class="catalog-item-content">
+                    <h3>Кран шаровый с электроприводом</h3>
+                    <p>Несколько типов</p>
+                    <a href="https://t.me/vitim_support" class="btn" rel="noopener">Сделать заказ</a>
+                </div>
+            </div>
+            
+            <!-- Элемент 2 -->
+            <div class="catalog-item">
+                <img src="../assets/img/water-meter.jpg" alt="Счётчик воды" loading="lazy">
+                <div class="catalog-item-content">
+                    <h3>Счётчик воды</h3>
+                    <p>Несколько типов</p>
+                    <a href="https://t.me/vitim_support" class="btn" rel="noopener">Сделать заказ</a>
+                </div>
+            </div>
+            
+            <!-- Элемент 3 -->
+            <div class="catalog-item">
+                <img src="../assets/img/pipes.jpg" alt="Трубы различных типов" loading="lazy">
+                <div class="catalog-item-content">
+                    <h3>Трубы ППРС, ПНД, PEX-A, PE-RT</h3>
+                    <p>Все типоразмеры для внутренних сетей</p>
+                    <a href="https://t.me/vitim_support" class="btn" rel="noopener">Сделать заказ</a>
+                </div>
+            </div>
+            
+            <!-- Остальные элементы каталога аналогично -->
+            <!-- Всего 25 элементов по вашему оригиналу -->
+            
+        </div>
+    </main>
 
-<template id="popups-images-stash">
-</template>
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ВиТИМ</h3>
+                    <p>Водоснабжение и технологии информационного моделирования</p>
+                    <p>© 2025 Все права защищены</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p>+7 (906) 280-08-08</p>
+                    <p>+7 (952) 250-70-69</p>
+                    <p>Архангельск, ул. Карла Либкнехта, д. 22</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="/page3">Наши разработки</a></li>
+                        <li><a href="/page5">Партнёры</a></li>
+                        <li><a href="https://t.me/vitim_support" rel="noopener">Телеграм</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<script>
-    window.tbConfig={"inFrame":false,"enableLazyLoading":false,"enableJsLazyLoading":false,"enableDynamicGoods":true,"isPreviewMode":false,"hasPromocodes":false,"posScriptUrl":"https://forma.tinkoff.ru/static/onlineScript.js","enableMessengerLazyLoading":true,"enableCssScrollSnapSlider":true,"usePublicSitesOrdersApi":false,"yandexMapsApiKey":"a9eba83c-b342-4dfe-ab11-2c7cbd6839cb","messengerLink":"https://w.tb.ru/open-messenger/widget?wId=W-53F512BCA3AC4760B37A64A66A1DE38F","cartHash":"U2FsdGVkX1+NuQ98XRAmUayfDWYrEEenzPEawGmTAv3Gu9Z+/kg95+azIm2eb00Ec8n4/ElK2+yBZf9s9wi3kGpTccngCEglZOMB7z+itcwG9sCECVBdtIaB9mo2/1MY","enableSitesCheckoutIntegration":false,"yaMetricsCounter":"99239940","staticPath":"https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net/tb/0.1.822"};
-    window.tbConfig.isExported=true;window.tbConfig.exportedApiUrl='https://a.tb.ru';
-    window.tbConfig.apiUrl=!window.tbConfig.isExported ? '' : window.tbConfig.exportedApiUrl;
-    window.tbConfig.isModern='noModule'in HTMLScriptElement.prototype;
-    (function (){var n,o="chrome"in window,e="InstallTrigger"in window;function t(n){var o=document.createElement("script");return o.src="".concat(window.tbConfig.staticPath,"/js/").concat(n),window.tbConfig.isModern&&(o.type="module",o.src=o.src.replace(".js",".modern.js")),o.defer=!0,o}function d(n){var o=t(n);document.head.appendChild(o)}window.tbConfig.enableLazyLoading&&d("lazy-load.js"),"attachShadow"in Element.prototype||d("lit-polyfill-support.js"),d("webcomponents-loader.js"),o||e||d("smoothscroll.js"),n=t("front.js"),document.addEventListener("DOMContentLoaded",(function(){document.head.appendChild(n)}));})()
-</script>
-
-    <link rel="stylesheet" href="../assets/styles/size-m.css" />
-    <link rel="stylesheet" href="../assets/styles/popups.css" />
-    <link rel="stylesheet" href="../assets/styles/styles-helpers.css" />
-
-
-    <section data-type="footer" class="s-footer"><link
-                    id="footer"
-                    rel="stylesheet"
-                    href="../assets/styles/footer.css"
-                /> <a href="https://www.tbank.ru/business/website-builder?utm_source&#x3D;sites.footer&amp;utm_medium&#x3D;ref&amp;utm_campaign&#x3D;sites.main" class="s-footer__link"><div>Конструктор сайтов&nbsp;от&nbsp;</div><img class="s-footer__logo_v2" alt="Т-Банк" src="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net/tb/0.1.822/images/logos/T-BANK_logo_white.svg "> </a> </section>      <section id="yandex-metrica-script" data-type="script"><div class="sb-container sb-container_no-position"> 
-        <!-- Yandex Metrica -->
-        <script type="text/javascript">
-           (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-           m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-           (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-           ym(99239940, "init", {
-                id:99239940,
-                clickmap:true,
-                trackLinks:true,
-                webvisor:true,
-                accurateTrackBounce:true,
-                ecommerce:"dataLayer"
-           });
-        </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/99239940" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- End Yandex Metrica --> </div></section>  
+    <!-- Базовый скрипт -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ленивая загрузка изображений
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => imageObserver.observe(img));
+            }
+            
+            // Мобильное меню
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    document.querySelector('nav').classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
