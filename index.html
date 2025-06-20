@@ -2,15 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Главная страница | ВиТИМ</title>
-    <meta name="description" content="Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения.">
+    <title>Главная страница | ВиТИМ - Водоснабжение и BIM технологии</title>
+    <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="ВиТИМ - Водоснабжение и технологии информационного моделирования">
-    <meta property="og:description" content="Разработка ПО и 3D моделей для проектирования инженерных систем">
-    <meta property="og:image" content="../assets/img/da39f859-4440-421a-8238-2803f6a9731f-11709153.png">
+    <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий">
+    <meta property="og:image" content="../assets/img/og-image.jpg">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vitim.ru">
     
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
@@ -19,30 +20,72 @@
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net">
-    <link rel="preload" href="../assets/styles/main.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap" as="style">
+    <link rel="preload" href="../assets/styles/main.min.css" as="style">
+    <link rel="preload" href="../assets/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="../assets/styles/main.css">
-    <!--link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap"-->
+    <link rel="stylesheet" href="../assets/styles/main.min.css">
+    
+    <!-- Critical CSS (встроенный для ускорения первой отрисовки) -->
+    <style>
+        :root {
+            --primary: #20BF6B;
+            --primary-dark: #1aa358;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #111111;
+            --gray: #777777;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            margin: 0;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/hero-bg.jpg') center/cover;
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+    </style>
 </head>
 
 <body class="page-home">
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">
-                <img src="../assets/img/logo.png" alt="ВиТИМ" width="120" height="40">
-            </a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/page3">Наши разработки</a></li>
-                    <li><a href="/page4">Каталог 3D моделей</a></li>
-                    <li><a href="/page5">Партнёры</a></li>
-                </ul>
-            </nav>
-            <a href="https://t.me/vitim_support" class="btn btn-outline">Связаться</a>
+            <div class="header-inner">
+                <a href="/" class="logo">
+                    <img src="../assets/img/logo.svg" alt="ВиТИМ" width="150" height="50" loading="lazy">
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="nav">
+                    <ul>
+                        <li><a href="/" class="active">Главная</a></li>
+                        <li><a href="/page3">Наши разработки</a></li>
+                        <li><a href="/page4">Каталог 3D моделей</a></li>
+                        <li><a href="/page5">Партнёры</a></li>
+                        <li><a href="https://t.me/vitim_support" class="btn btn-outline">Связаться</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -61,70 +104,132 @@
     </section>
 
     <!-- About Section -->
-    <section class="section about">
+    <section class="section about" id="about">
         <div class="container">
             <div class="section-header">
                 <h2>О главном</h2>
+                <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
             </div>
-            <div class="grid">
+            <div class="grid grid-2">
                 <div class="grid-item">
-                    <p>Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
+                    <div class="about-card">
+                        <svg class="icon" width="48" height="48"><use xlink:href="../assets/img/icons.svg#cad"></use></svg>
+                        <h3>Интеграция с САПР</h3>
+                        <p>Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
+                    </div>
                 </div>
                 <div class="grid-item">
-                    <p>Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
+                    <div class="about-card">
+                        <svg class="icon" width="48" height="48"><use xlink:href="../assets/img/icons.svg#bim"></use></svg>
+                        <h3>Комплексный подход</h3>
+                        <p>Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="section features">
+    <section class="section features" id="features">
         <div class="container">
             <div class="section-header">
                 <h2>Возможности нашего продукта</h2>
-                <p class="subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+                <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
             </div>
-            <div class="grid">
+            <div class="grid grid-3">
                 <div class="feature-card">
                     <div class="feature-number">1</div>
                     <h3>Интеграция с популярными САПР</h3>
                     <p>Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p>
                 </div>
-                <!-- Repeat for other features -->
+                <div class="feature-card">
+                    <div class="feature-number">2</div>
+                    <h3>Преобразование форматов</h3>
+                    <p>Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">3</div>
+                    <h3>Интеграция с BIM</h3>
+                    <p>Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">4</div>
+                    <h3>Расчётные модули</h3>
+                    <p>Встроенные модули для выполнения расчётов систем водоснабжения</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">5</div>
+                    <h3>Автоматизация процессов</h3>
+                    <p>Автоматизация рутинных задач, таких как создание отчётов и документации</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">6</div>
+                    <h3>Безопасность данных</h3>
+                    <p>Обеспечение защиты конфиденциальной информации и данных</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="section team">
+    <section class="section team" id="team">
         <div class="container">
             <div class="section-header">
                 <h2>Команда проекта</h2>
-                <p>Мы собрали команду из молодых профессионалов в области BIM-проектирования гражданских объектов</p>
+                <p class="section-subtitle">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
             </div>
+            
             <div class="team-slider">
-                <!-- Team member slides -->
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="../assets/img/team/team1.jpg" alt="Посыпанов Сергей Валентинович" loading="lazy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Посыпанов Сергей Валентинович</h3>
+                        <p class="position">Научный руководитель проекта</p>
+                        <p class="bio">Профессор, доктор технических наук</p>
+                    </div>
+                </div>
+                
+                <!-- Другие члены команды -->
             </div>
         </div>
     </section>
 
     <!-- Contacts Section -->
-    <section class="section contacts">
+    <section class="section contacts" id="contacts">
         <div class="container">
-            <div class="grid">
-                <div class="grid-item">
+            <div class="grid grid-2">
+                <div class="contacts-info">
                     <h2>Контакты</h2>
+                    
                     <div class="contact-item">
-                        <img src="../assets/img/icons/map-marker.svg" alt="">
+                        <svg class="icon" width="24" height="24"><use xlink:href="../assets/img/icons.svg#map"></use></svg>
                         <div>
                             <h3>Адрес</h3>
                             <p>Архангельск, ул. Карла Либкнехта, д. 22</p>
                         </div>
                     </div>
-                    <!-- Other contact items -->
+                    
+                    <div class="contact-item">
+                        <svg class="icon" width="24" height="24"><use xlink:href="../assets/img/icons.svg#clock"></use></svg>
+                        <div>
+                            <h3>Время работы</h3>
+                            <p>Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <svg class="icon" width="24" height="24"><use xlink:href="../assets/img/icons.svg#phone"></use></svg>
+                        <div>
+                            <h3>Телефоны</h3>
+                            <p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <!-- Map placeholder -->
+                
+                <div class="contacts-map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f7a9b3c..." loading="lazy" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -133,31 +238,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="grid">
+            <div class="grid grid-3">
                 <div class="footer-col">
-                    <img src="../assets/img/logo-white.png" alt="ВиТИМ" width="120" height="40">
-                    <p>© ВиТИМ 2025</p>
+                    <a href="/" class="footer-logo">
+                        <img src="../assets/img/logo-white.svg" alt="ВиТИМ" width="150" height="50" loading="lazy">
+                    </a>
+                    <p class="copyright">© ВиТИМ 2025. Все права защищены</p>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Навигация</h3>
-                    <ul>
+                    <ul class="footer-nav">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="/page4">Каталог</a></li>
-                        <li><a href="/page3">Разработки</a></li>
+                        <li><a href="/page3">Наши разработки</a></li>
+                        <li><a href="/page4">Каталог 3D моделей</a></li>
+                        <li><a href="/page5">Партнёры</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Контакты</h3>
-                    <p>+7 (906) 280 08 08<br>
-                    +7 (952) 250 70 69</p>
-                    <p>Пн-Пт: 9:00-18:00</p>
+                    <address>
+                        <p>Архангельск, ул. Карла Либкнехта, д. 22</p>
+                        <p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p>
+                        <p>sopilov.valera@mail.ru<br>duryagin1995@yandex.ru</p>
+                    </address>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/main.min.js" defer></script>
+    
     <!-- Yandex Metrika -->
     <script>
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -170,6 +284,6 @@
              accurateTrackBounce:true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/99239940" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99239940" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 </body>
 </html>
