@@ -483,6 +483,54 @@ img {
     }
 }
 
+/* Стили для секций */
+.section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .feature-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Эффекты при наведении */
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 /* Cards */
 .card {
   background: var(--light);
