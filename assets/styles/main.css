@@ -590,8 +590,9 @@ img {
   object-fit: cover;
 }*/
 
+
 /* Contact Section */
-.contact-item {
+/*.contact-item {
   display: flex;
   align-items: flex-start;
   gap: var(--space-md);
@@ -604,7 +605,7 @@ img {
 }
 
 /* Footer */
-.footer {
+/*.footer {
   background: var(--secondary);
   color: var(--light);
   padding: var(--space-xl) 0;
@@ -639,7 +640,8 @@ img {
 .footer-nav a:hover,
 .footer-nav a:focus {
   color: var(--light);
-}
+} */
+
 
 /* ===== Contacts Section ===== */
 .section.contacts {
