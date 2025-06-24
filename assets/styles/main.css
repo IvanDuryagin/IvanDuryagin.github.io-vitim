@@ -590,6 +590,57 @@ img {
   object-fit: cover;
 }*/
 
+/* Contact Section */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-item .icon {
+  flex-shrink: 0;
+  fill: var(--primary);
+}
+
+/* Footer */
+.footer {
+  background: var(--secondary);
+  color: var(--light);
+  padding: var(--space-xl) 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.footer-col {
+  margin-bottom: var(--space-lg);
+}
+
+.footer-col h3 {
+  color: var(--light);
+  margin-bottom: var(--space-md);
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav a {
+  color: rgba(var(--color-light), 0.7);
+  display: block;
+  margin-bottom: var(--space-xs);
+  padding: var(--space-xs) 0;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--light);
+}
+
 /* ===== Contacts Section ===== */
 .section.contacts {
     background-color: #f9f9f9;
