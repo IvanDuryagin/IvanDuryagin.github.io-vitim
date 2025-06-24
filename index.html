@@ -104,73 +104,113 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>О главном</h2>
-                <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
-            </div>
-            <div class="grid grid-2">
-                <div class="grid-item">
-                    <div class="about-card">
-                        <svg class="icon" width="48" height="48"><use xlink:href="./assets/img/icons.svg#cad"></use></svg>
-                        <h3>Интеграция с САПР</h3>
-                        <p>Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="about-card">
-                        <svg class="icon" width="48" height="48"><use xlink:href="./assets/img/icons.svg#bim"></use></svg>
-                        <h3>Комплексный подход</h3>
-                        <p>Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- О главном -->
+<section class="section">
+    <div class="container">
+        <div class="section-header" style="background-color: #f5f5f5; border-radius: 12px; padding: 30px; margin-bottom: 30px; text-align: center;">
+            <h2 style="color: #333; margin-bottom: 10px;">О главном</h2>
+            <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Наш подход к проектированию инженерных систем</p>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="section features" id="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Возможности нашего продукта</h2>
-                <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+        <div class="grid grid-2" style="gap: 20px;">
+            <!-- Блок 1 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 30px;">
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12L10 17L20 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #333; margin: 0;">Интеграция с САПР</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6;">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>1.Интеграция с популярными САПР</h3>
-                    <p>Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p>
+
+            <!-- Блок 2 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 30px;">
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 10C9.55228 10 10 9.55228 10 9C10 8.44772 9.55228 8 9 8C8.44772 8 8 8.44772 8 9C8 9.55228 8.44772 10 9 10Z" fill="white"/>
+                            <path d="M15 10C15.5523 10 16 9.55228 16 9C16 8.44772 15.5523 8 15 8C14.4477 8 14 8.44772 14 9C14 9.55228 14.4477 10 15 10Z" fill="white"/>
+                            <path d="M9 16C9.55228 16 10 15.5523 10 15C10 14.4477 9.55228 14 9 14C8.44772 14 8 14.4477 8 15C8 15.5523 8.44772 16 9 16Z" fill="white"/>
+                            <path d="M15 16C15.5523 16 16 15.5523 16 15C16 14.4477 15.5523 14 15 14C14.4477 14 14 14.4477 14 15C14 15.5523 14.4477 16 15 16Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 style="color: #333; margin: 0;">Комплексный подход</h3>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>2.Преобразование форматов</h3>
-                    <p>Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>3.Интеграция с BIM</h3>
-                    <p>Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>4.Расчётные модули</h3>
-                    <p>Встроенные модули для выполнения расчётов систем водоснабжения</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>5.Автоматизация процессов</h3>
-                    <p>Автоматизация рутинных задач, таких как создание отчётов и документации</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-number"></div>
-                    <h3>6.Безопасность данных</h3>
-                    <p>Обеспечение защиты конфиденциальной информации и данных</p>
-                </div>
+                <p style="color: #666; line-height: 1.6;">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Возможности нашего продукта -->
+<section class="section" style="background-color: #f9f9f9;">
+    <div class="container">
+        <div class="section-header" style="background-color: #f5f5f5; border-radius: 12px; padding: 30px; margin-bottom: 30px; text-align: center;">
+            <h2 style="color: #333; margin-bottom: 10px;">Возможности нашего продукта</h2>
+            <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+        </div>
+
+        <div class="grid grid-3" style="gap: 20px;">
+            <!-- Возможность 1 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">1</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Интеграция с популярными САПР</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p>
+            </div>
+
+            <!-- Возможность 2 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">2</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Преобразование форматов</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p>
+            </div>
+
+            <!-- Возможность 3 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">3</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Интеграция с BIM</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p>
+            </div>
+
+            <!-- Возможность 4 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">4</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Расчётные модули</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Встроенные модули для выполнения расчётов систем водоснабжения</p>
+            </div>
+
+            <!-- Возможность 5 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">5</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Автоматизация процессов</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Автоматизация рутинных задач, таких как создание отчётов и документации</p>
+            </div>
+
+            <!-- Возможность 6 -->
+            <div class="feature-card" style="background-color: #f5f5f5; border-radius: 12px; padding: 25px;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold;">6</div>
+                    <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Безопасность данных</h3>
+                </div>
+                <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Обеспечение защиты конфиденциальной информации и данных</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Team Section -->
     <section class="section team" id="team">
