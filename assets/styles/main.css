@@ -565,7 +565,7 @@ img {
 }
 
 /* Team Section */
-.team-slider {
+/*.team-slider {
   position: relative;
   overflow: hidden;
 }
@@ -588,7 +588,7 @@ img {
   width: 100%;
   height: 300px;
   object-fit: cover;
-}
+}*/
 
 /* Contact Section */
 .contact-item {
