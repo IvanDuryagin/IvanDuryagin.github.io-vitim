@@ -2,183 +2,249 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Партнёры проекта | ВиТИМ</title>
+    <title>Партнёры проекта | ВиТИМ - Водоснабжение и BIM технологии</title>
     <meta name="description" content="Организации-партнёры проекта ВиТИМ в сфере BIM-проектирования">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Партнёры проекта | ВиТИМ">
     <meta property="og:description" content="Организации-партнёры в сфере проектирования и строительства">
-    <meta property="og:image" content="../assets/img/og-image.jpg">
+    <meta property="og:image" content="./assets/img/favicon1.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ivanDuryagin.github.io-vitim/page5/">
+    <meta property="og:url" content="https://vitim.ru/page5">
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon5.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon4.png">
+    <link rel="apple-touch-icon" href="./assets/img/favicon5.png">
     
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="../assets/styles/main.min.css">
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net">
+    <link rel="preload" href="./assets/styles/main.min.css" as="style">
+    <link rel="preload" href="./assets/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- Критический CSS -->
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+    
+    <!-- Critical CSS -->
     <style>
+        :root {
+            --primary: #20BF6B;
+            --primary-dark: #1aa358;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #111111;
+            --gray: #777777;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #111;
+            color: var(--dark);
             margin: 0;
-            padding-top: 70px;
+            padding-top: 80px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        .partners {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        .partner-card {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-        .partner-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .partner-image {
-            width: 315px;
-            height: 435px;
-            object-fit: cover;
-        }
-        .partner-content {
-            padding: 20px;
-        }
-        .section-title {
+        .hero-small {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/hero-bg.jpg') center/cover;
+            color: var(--light);
+            padding: 100px 0 60px;
             text-align: center;
+        }
+        
+        /* Стили для карточек партнеров */
+        .partner-type {
+            background-color: var(--primary);
+            color: white;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             margin-bottom: 10px;
-        }
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
         }
     </style>
 </head>
 
-<body>
-    <!-- Упрощенный хедер -->
+<body class="page-partners">
+    <!-- Header (как на главной странице) -->
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">ВиТИМ</a>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="../page3">Наши разработки</a></li>
-                    <li><a href="../page5" class="active">Партнёры</a></li>
-                    <li><a href="https://t.me/vitim_support" rel="noopener">Связаться</a></li>
-                </ul>
-            </nav>
+            <div class="header-inner" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 0;">
+                <a href="./" class="logo">
+                    <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="60" height="60" loading="lazy">
+                </a>
+            
+                <nav class="nav">
+                    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 15px; align-items: center;">
+                        <li><a href="./" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Главная</a></li>
+                        <li><a href="./page3" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Наши разработки</a></li>
+                        <li><a href="./page4" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Каталог 3D моделей</a></li>
+                        <li><a href="./page5" class="nav-btn active" style="display: inline-block; padding: 10px 20px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Партнёры</a></li>
+                        <li><a href="https://t.me/vitim_support" class="contact-btn" style="display: inline-block; padding: 10px 20px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Связаться</a></li>
+                    </ul>
+                </nav>
+            
+                <button class="mobile-menu-toggle" aria-label="Меню" style="display: none; background: none; border: none; cursor: pointer;">
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Основной контент -->
-    <main class="container">
-        <h1 class="section-title">Партнёры проекта</h1>
-        <p class="section-subtitle">Сотрудничаем с проектными организациями и предпринимателями в сфере проектирования гражданских объектов</p>
-        
-        <div class="partners">
-            <!-- Партнёр 1 -->
-            <div class="partner-card">
-                <img src="../assets/img/partner1.jpg" alt="ООО Проектная мастерская АрхКуб" width="210" height="290" loading="lazy" class="partner-image">
-                <div class="partner-content">  
-                    <h3>ООО "Проектная мастерская АрхКуб"</h3>
-                    <p>Проектная организация, занимающаяся архитектурным и инженерным проектированием объектов капитального строительства гражданского назначения на стадиях: от концепции до рабочего проекта, использующая BIM-технологии</p>
-                </div>                
-            </div>
-            
-            <!-- Партнёр 2 -->
-            <div class="partner-card">
-                <img src="../assets/img/partner2.jpg" alt="ООО Архангельская межотраслевая компания" loading="lazy" class="partner-image">
-                <div class="partner-content">
-                    <h3>ООО "Архангельская межотраслевая компания"</h3>
-                    <p>Организация, занимающаяся монтажом и проектированием электрических сетей на объектах капитального строительства гражданского назначения</p>
-                </div>
-            </div>
-            
-            <!-- Партнёр 3 -->
-            <div class="partner-card">
-                <img src="../assets/img/letter_yakovleva.jpeg" alt="ИП Яковлева Елена Васильевна" loading="lazy" class="partner-image">
-                <div class="partner-content">
-                    <h3>ИП Яковлева Елена Васильевна</h3>
-                    <p>Индивидуальный предприниматель в сфере проектирования систем водоснабжения-водоотведения объектов капитального строительства, использующий BIM-технологии</p>
-                </div>
-            </div>
-            
-            <!-- Партнёр 4 -->
-            <div class="partner-card">
-                <img src="../assets/img/letter_vish.jpeg" alt="Северный (Арктический) Федеральный Университет" loading="lazy" class="partner-image">
-                <div class="partner-content">
-                    <h3>Высшая Инженерная Школа САФУ</h3>
-                    <p>Учебно-научное подразделение Северного (Арктического) федерального университета имени М. В. Ломоносова, занимающееся подготовкой высококвалифицированных инженерных кадров</p>
-                </div>
-            </div>
-            
-            <!-- Партнёр 5 -->
-            <div class="partner-card">
-                <img src="../assets/img/letter_intex.jpeg" alt="ООО Инженерные технологии" loading="lazy" class="partner-image">
-                <div class="partner-content">
-                    <h3>ООО "Инженерные технологии"</h3>
-                    <p>Организация, занимающаяся разработкой строительных проектов, строительством жилых и нежилых зданий, инженерных коммуникаций</p>
-                </div>
-            </div>
-            
-            <!-- Партнёр 6 -->
-            <div class="partner-card">
-                <img src="../assets/img/letter_labudin.jpeg" alt="ИП Лабудин Борис Васильевич" loading="lazy" class="partner-image">
-                <div class="partner-content">
-                    <h3>ИП Лабудин Борис Васильевич</h3>
-                    <p>Индивидуальный предприниматель в сфере строительной экспертизы и оценки жилого и нежилого недвижимого имущества</p>
-                </div>
-            </div>
+    <!-- Hero Small -->
+    <section class="hero-small">
+        <div class="container">
+            <h1>Наши партнёры</h1>
+            <p class="lead">Сотрудничаем с проектными организациями и предпринимателями в сфере проектирования гражданских объектов</p>
         </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Партнеры -->
+        <section class="section">
+            <div class="container">
+                <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                    <div class="block-header" style="text-align: center; margin-bottom: 40px;">
+                        <h2 style="color: #333; margin-bottom: 10px;">Организации-партнёры</h2>
+                        <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Профессиональные организации, с которыми мы сотрудничаем</p>
+                    </div>
+
+                    <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                        <!-- Партнёр 1 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/partner1.jpg" alt="ООО Проектная мастерская АрхКуб" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">ООО "Проектная мастерская АрхКуб"</h3>
+                                <p class="partner-type">Проектная организация</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Архитектурное и инженерное проектирование объектов гражданского назначения с использованием BIM-технологий</p>
+                            </div>
+                        </div>
+
+                        <!-- Партнёр 2 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/partner2.jpg" alt="ООО Архангельская межотраслевая компания" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">ООО "Архангельская межотраслевая компания"</h3>
+                                <p class="partner-type">Монтажная организация</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Монтаж и проектирование электрических сетей на объектах гражданского строительства</p>
+                            </div>
+                        </div>
+
+                        <!-- Партнёр 3 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/letter_yakovleva.jpeg" alt="ИП Яковлева Елена Васильевна" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">ИП Яковлева Елена Васильевна</h3>
+                                <p class="partner-type">Индивидуальный предприниматель</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Проектирование систем водоснабжения-водоотведения с использованием BIM-технологий</p>
+                            </div>
+                        </div>
+
+                        <!-- Партнёр 4 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/letter_vish.jpeg" alt="Северный (Арктический) Федеральный Университет" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Высшая Инженерная Школа САФУ</h3>
+                                <p class="partner-type">Учебное заведение</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Подготовка высококвалифицированных инженерных кадров</p>
+                            </div>
+                        </div>
+
+                        <!-- Партнёр 5 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/letter_intex.jpeg" alt="ООО Инженерные технологии" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">ООО "Инженерные технологии"</h3>
+                                <p class="partner-type">Строительная компания</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Разработка строительных проектов и строительство жилых и нежилых зданий</p>
+                            </div>
+                        </div>
+
+                        <!-- Партнёр 6 -->
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/letter_labudin.jpeg" alt="ИП Лабудин Борис Васильевич" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                            </div>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">ИП Лабудин Борис Васильевич</h3>
+                                <p class="partner-type">Экспертиза и оценка</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Строительная экспертиза и оценка жилого и нежилого недвижимого имущества</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section (как на странице 3) -->
+        <section class="section">
+            <div class="container">
+                <div class="unified-block" style="background-color: #20BF6B; color: white; text-align: center; padding: 60px 40px; border-radius: 12px;">
+                    <h2 style="color: white; margin-bottom: 20px;">Хотите стать нашим партнёром?</h2>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">Присоединяйтесь к нашему проекту и получите преимущества сотрудничества</p>
+                    <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="https://t.me/vitim_support" class="btn-primary" style="display: inline-block; padding: 12px 25px; background-color: white; border-radius: 8px; text-decoration: none; color: #20BF6B; font-weight: 500; transition: all 0.3s ease;">Обсудить сотрудничество</a>
+                        <a href="mailto:duryagin1995@yandex.ru" class="btn-secondary" style="display: inline-block; padding: 12px 25px; background-color: transparent; border: 2px solid white; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Написать email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Футер -->
-    <footer class="footer">
+    <!-- Footer (как на странице 3) -->
+    <footer class="footer" style="background-color: #333; color: white; padding: 60px 0;">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-inner" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                 <div class="footer-col">
-                    <h3>ВиТИМ</h3>
-                    <p>Водоснабжение и технологии информационного моделирования</p>
-                    <p>© 2025 Все права защищены</p>
+                    <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50" loading="lazy">
+                    <p style="margin-top: 15px; color: rgba(255,255,255,0.7);">Водоснабжение и технологии информационного моделирования</p>
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Контакты</h3>
-                    <p>+7 (906) 280-08-08</p>
-                    <p>+7 (952) 250-70-69</p>
-                    <p>Архангельск, ул. Воскресенская, д. 116</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Ссылки</h3>
-                    <ul>
-                        <li><a href="/page3">Наши разработки</a></li>
-                        <li><a href="/page4">Каталог 3D моделей</a></li>
-                        <li><a href="https://t.me/vitim_support" rel="noopener">Телеграм</a></li>
+                    <h3 style="color: white; margin-bottom: 15px;">Контакты</h3>
+                    <ul class="footer-nav" style="list-style: none; padding: 0;">
+                        <li><a href="tel:+79062800808" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">+7 (906) 280-08-08</a></li>
+                        <li><a href="mailto:duryagin1995@yandex.ru" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">duryagin1995@yandex.ru</a></li>
+                        <li><a href="https://t.me/vitim_support" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">Telegram</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: white; margin-bottom: 15px;">Адрес</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Архангельск, ул. Воскресенская, д. 116</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">© ВиТИМ 2023. Все права защищены</p>
             </div>
         </div>
     </footer>
 
-    <!-- Базовый скрипт -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Ленивая загрузка изображений
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+            }
+            
+            // Lazy loading images
             if ('IntersectionObserver' in window) {
                 const lazyImages = document.querySelectorAll('img[loading="lazy"]');
                 const imageObserver = new IntersectionObserver((entries) => {
@@ -186,21 +252,32 @@
                         if (entry.isIntersecting) {
                             const img = entry.target;
                             img.src = img.dataset.src || img.src;
+                            img.removeAttribute('data-src');
                             imageObserver.unobserve(img);
                         }
                     });
                 });
                 
-                lazyImages.forEach(img => imageObserver.observe(img));
-            }
-            
-            // Мобильное меню
-            const menuToggle = document.querySelector('.menu-toggle');
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    document.querySelector('nav').classList.toggle('active');
+                lazyImages.forEach(img => {
+                    if (img.hasAttribute('data-src')) {
+                        imageObserver.observe(img);
+                    }
                 });
             }
+            
+            // Hover effects for cards
+            const cards = document.querySelectorAll('.team-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+                });
+            });
         });
     </script>
 </body>
