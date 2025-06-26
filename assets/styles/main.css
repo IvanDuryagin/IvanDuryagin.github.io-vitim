@@ -1007,3 +1007,143 @@ img {
         margin: 0 auto;
     }
 }
+
+/* ===== Small Hero ===== */
+.hero-small {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              var(--hero-bg) center/cover;
+  color: var(--light);
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.hero-small h1 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero-small .lead {
+  font-size: var(--text-lg);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ===== Patent Cards ===== */
+.patent-card {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  height: 100%;
+}
+
+.patent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.patent-image {
+  height: 300px;
+  overflow: hidden;
+}
+
+.patent-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.patent-card:hover .patent-image img {
+  transform: scale(1.05);
+}
+
+.patent-info {
+  padding: var(--space-lg);
+}
+
+/* Для карточек в гриде из 3 колонок - уменьшаем высоту изображения */
+.grid-3 .patent-image {
+  height: 250px;
+}
+
+/* ===== CTA Block ===== */
+.cta-block {
+  background: var(--primary);
+  color: var(--light);
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+  border-radius: var(--radius-lg);
+}
+
+.cta-block h2 {
+  color: var(--light);
+}
+
+.cta-block .btn-primary {
+  background: var(--light);
+  color: var(--primary);
+}
+
+.cta-block .btn-primary:hover {
+  background: rgba(var(--color-light), 0.9);
+}
+
+.cta-block .btn-secondary {
+  border-color: var(--light);
+  color: var(--light);
+}
+
+.cta-block .btn-secondary:hover {
+  background: var(--light);
+  color: var(--primary);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--secondary);
+  color: var(--light);
+  padding: var(--space-xl) 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-xl);
+}
+
+.footer-col {
+  margin-bottom: var(--space-md);
+}
+
+.footer-col h3 {
+  color: var(--light);
+  margin-bottom: var(--space-md);
+  font-size: var(--text-lg);
+}
+
+.footer-nav {
+  list-style: none;
+}
+
+.footer-nav a {
+  color: rgba(var(--color-light), 0.7);
+  display: block;
+  padding: var(--space-xs) 0;
+  transition: var(--transition-base);
+}
+
+.footer-nav a:hover {
+  color: var(--light);
+}
+
+.footer-bottom {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(var(--color-light), 0.1);
+  text-align: center;
+  color: rgba(var(--color-light), 0.5);
+  font-size: var(--text-sm);
+}
