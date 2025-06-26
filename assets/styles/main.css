@@ -1029,47 +1029,39 @@ img {
   opacity: 0.9;
 }
 
-/* ===== Patent Cards ===== */
-.patent-card {
-  background: var(--light);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-base);
-  height: 100%;
+/* ===== Patent Details ===== */
+.patent-details {
+  background-color: rgba(32, 191, 107, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 0.9rem;
 }
 
-.patent-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+.patent-details p {
+  margin: 5px 0;
+  color: var(--secondary);
 }
 
-.patent-image {
-  height: 300px;
-  overflow: hidden;
+/* Адаптация карточек для патентов */
+.team-card .team-info h3 {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.patent-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.position {
+  background-color: var(--primary);
+  color: white;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
-.patent-card:hover .patent-image img {
-  transform: scale(1.05);
-}
-
-.patent-info {
-  padding: var(--space-lg);
-}
-
-/* Для карточек в гриде из 3 колонок - уменьшаем высоту изображения */
-.grid-3 .patent-image {
-  height: 250px;
-}
-
-/* ===== CTA Block ===== */
+/* CTA Block */
 .cta-block {
   background: var(--primary);
   color: var(--light);
@@ -1101,7 +1093,7 @@ img {
   color: var(--primary);
 }
 
-/* ===== Footer ===== */
+/* Footer */
 .footer {
   background: var(--secondary);
   color: var(--light);
