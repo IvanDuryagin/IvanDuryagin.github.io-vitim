@@ -2,127 +2,276 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Наши разработки | ВиТИМ</title>
-    <meta name="description" content="Запатентованные технологии проекта ВиТИМ">
+    <title>Наши разработки | ВиТИМ - Водоснабжение и BIM технологии</title>
+    <meta name="description" content="Запатентованные технологии проекта ВиТИМ. Программы для ЭВМ, полезные модели и BIM-разработки.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Наши разработки | ВиТИМ">
     <meta property="og:description" content="Запатентованные технологии проекта ВиТИМ">
-    <meta property="og:image" content="../assets/img/og-image.jpg">
+    <meta property="og:image" content="./assets/img/favicon1.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ivanDuryagin.github.io-vitim/page3/">
+    <meta property="og:url" content="https://vitim.ru/page3">
     
     <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon1.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon1.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon5.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon4.png">
+    <link rel="apple-touch-icon" href="./assets/img/favicon5.png">
     
-    <!-- Основные стили -->
-    <link rel="stylesheet" href="../assets/styles/main.min.css">
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net">
+    <link rel="preload" href="./assets/styles/main.min.css" as="style">
+    <link rel="preload" href="./assets/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
     
-    <!-- Критический CSS (упрощенный) -->
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+    
+    <!-- Critical CSS -->
     <style>
+        :root {
+            --primary: #20BF6B;
+            --primary-dark: #1aa358;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #111111;
+            --gray: #777777;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
-            color: #111;
+            color: var(--dark);
             margin: 0;
-            padding-top: 70px; /* Для фиксированного хедера */
+            padding-top: 80px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+        .hero-small {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/hero-bg.jpg') center/cover;
+            color: var(--light);
+            padding: 100px 0 60px;
+            text-align: center;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+        .patent-card {
+            background: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
         }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
+        .patent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
     </style>
 </head>
 
-<body>
-    <!-- Упрощенный хедер -->
+<body class="page-developments">
+    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">ВиТИМ</a>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Главная</a></li>
-                    <li><a href="../page3/" class="active">Наши разработки</a></li>
-                    <li><a href="../page4">Каталог 3D моделей</a></li>
-                    <li><a href="https://t.me/vitim_support">Связаться</a></li>
-                </ul>
-            </nav>
+            <div class="header-inner">
+                <a href="./" class="logo">
+                    <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="60" height="60" loading="lazy">
+                </a>
+            
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./" class="nav-btn">Главная</a></li>
+                        <li><a href="./page3" class="nav-btn active">Наши разработки</a></li>
+                        <li><a href="./page4" class="nav-btn">Каталог 3D моделей</a></li>
+                        <li><a href="./page5" class="nav-btn">Партнёры</a></li>
+                        <li><a href="https://t.me/vitim_support" class="contact-btn">Связаться</a></li>
+                    </ul>
+                </nav>
+            
+                <button class="mobile-menu-toggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Основной контент -->
-    <main class="container">
-        <section>
-            <h1>Разработки команды проекта</h1>
-            <p>Запатентованные технологии в рамках проекта "Водоснабжение и технологии информационного моделирования" (ВиТИМ)</p>
-            
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="../assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy">
-                    <p><strong>Сопилов В.В.</strong>, к.т.н., <strong>Дурягин И.А.</strong>, свидетельство о государственной регистрации программы для ЭВМ №2024690988</p>
+    <!-- Hero Small -->
+    <section class="hero-small">
+        <div class="container">
+            <h1>Наши разработки</h1>
+            <p class="lead">Запатентованные технологии и программное обеспечение для BIM-проектирования</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Патенты ВиТИМ -->
+        <section class="section">
+            <div class="container">
+                <div class="unified-block">
+                    <div class="block-header">
+                        <h2>Разработки проекта ВиТИМ</h2>
+                        <p class="section-subtitle">Запатентованные технологии в рамках проекта "Водоснабжение и технологии информационного моделирования"</p>
+                    </div>
+
+                    <div class="grid grid-2">
+                        <div class="patent-card">
+                            <div class="patent-image" style="height: 300px; overflow: hidden;">
+                                <img src="./assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="patent-info" style="padding: 25px;">
+                                <h3 style="margin-bottom: 15px;">Программа для автоматизации расчётов</h3>
+                                <p style="color: var(--gray); margin-bottom: 20px;">Программный комплекс для автоматизированного расчёта систем водоснабжения с интеграцией в BIM-модели</p>
+                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 15px; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 0.9rem;"><strong>Авторы:</strong> Сопилов В.В., к.т.н., Дурягин И.А.</p>
+                                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>Патент:</strong> Свидетельство о гос. регистрации программы для ЭВМ №2024690988</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="patent-card">
+                            <div class="patent-image" style="height: 300px; overflow: hidden; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                                <img src="./assets/img/software-icon.png" alt="Программное обеспечение" style="max-width: 50%; height: auto; opacity: 0.8;">
+                            </div>
+                            <div class="patent-info" style="padding: 25px;">
+                                <h3 style="margin-bottom: 15px;">BIM-плагин для Revit</h3>
+                                <p style="color: var(--gray); margin-bottom: 20px;">Специализированный плагин для автоматизации проектирования систем водоснабжения в Revit</p>
+                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 15px; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 0.9rem;"><strong>Разработчик:</strong> Дурягин И.А.</p>
+                                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>Статус:</strong> В разработке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Разработки нашей команды в других направлениях</h2>
-            <p>Занимаемся научными изысканиями в других направлениях, связанных со строительством</p>
-            
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="../assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy">
-                    <p><strong>Сопилов В.В.</strong>, к.т.н., патент на полезную модель №216976</p>
+        <!-- Другие патенты -->
+        <section class="section" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="unified-block">
+                    <div class="block-header">
+                        <h2>Другие разработки нашей команды</h2>
+                        <p class="section-subtitle">Научные изыскания в смежных направлениях строительства и проектирования</p>
+                    </div>
+
+                    <div class="grid grid-3">
+                        <!-- Патент 1 -->
+                        <div class="patent-card">
+                            <div class="patent-image" style="height: 250px; overflow: hidden;">
+                                <img src="./assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="patent-info" style="padding: 20px;">
+                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Устройство для испытаний труб</h3>
+                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Устройство для испытаний труб на герметичность и прочность</p>
+                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Сопилов В.В., к.т.н.</p>
+                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №216976</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Патент 2 -->
+                        <div class="patent-card">
+                            <div class="patent-image" style="height: 250px; overflow: hidden;">
+                                <img src="./assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="patent-info" style="padding: 20px;">
+                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Система очистки кровли</h3>
+                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Автоматизированная система очистки кровли от снега и наледи</p>
+                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Дурягин И.А.</p>
+                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №229553</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Патент 3 -->
+                        <div class="patent-card">
+                            <div class="patent-image" style="height: 250px; overflow: hidden;">
+                                <img src="./assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="patent-info" style="padding: 20px;">
+                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Устройство для монтажа</h3>
+                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Устройство для монтажа трубопроводов в труднодоступных местах</p>
+                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
+                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Дурягин И.А.</p>
+                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №229881</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy">
-                    <p><strong>Дурягин И.А.</strong>, патент на полезную модель №229553</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy">
-                    <p><strong>Дурягин И.А.</strong>, патент на полезную модель №229881</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section">
+            <div class="container">
+                <div class="unified-block" style="background-color: var(--primary); color: var(--light); text-align: center; padding: 60px 40px;">
+                    <h2 style="color: var(--light); margin-bottom: 20px;">Заинтересованы в наших разработках?</h2>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">Свяжитесь с нами для получения дополнительной информации о возможностях сотрудничества</p>
+                    <div style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="https://t.me/vitim_support" class="btn-primary" style="background-color: var(--light); color: var(--primary);">Написать в Telegram</a>
+                        <a href="mailto:duryagin1995@yandex.ru" class="btn-secondary" style="border-color: var(--light); color: var(--light);">Отправить email</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Упрощенный футер -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>© ВиТИМ 2023. Все права защищены</p>
-            <address>
-                Контакты: <a href="mailto:duryagin1995@yandex.ru">duryagin1995@yandex.ru</a>
-            </address>
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50" loading="lazy">
+                    <p style="margin-top: 15px; color: rgba(255,255,255,0.7);">Водоснабжение и технологии информационного моделирования</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: var(--light);">Контакты</h3>
+                    <ul class="footer-nav">
+                        <li><a href="tel:+79062800808" style="color: rgba(255,255,255,0.7);">+7 (906) 280-08-08</a></li>
+                        <li><a href="mailto:duryagin1995@yandex.ru" style="color: rgba(255,255,255,0.7);">duryagin1995@yandex.ru</a></li>
+                        <li><a href="https://t.me/vitim_support" style="color: rgba(255,255,255,0.7);">Telegram</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 style="color: var(--light);">Адрес</h3>
+                    <p style="color: rgba(255,255,255,0.7);">Архангельск, ул. Воскресенская, д. 116</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">ВиТИМ 2025</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Базовый скрипт -->
     <script>
-        // Мобильное меню
         document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
             const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const nav = document.querySelector('nav');
+            const nav = document.querySelector('.nav');
             
             if (menuToggle) {
                 menuToggle.addEventListener('click', function() {
                     nav.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
                 });
             }
             
-            // Ленивая загрузка изображений
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Lazy loading images
             if ('IntersectionObserver' in window) {
                 const lazyImages = document.querySelectorAll('img[loading="lazy"]');
                 const imageObserver = new IntersectionObserver((entries) => {
@@ -130,12 +279,17 @@
                         if (entry.isIntersecting) {
                             const img = entry.target;
                             img.src = img.dataset.src || img.src;
+                            img.removeAttribute('data-src');
                             imageObserver.unobserve(img);
                         }
                     });
                 });
                 
-                lazyImages.forEach(img => imageObserver.observe(img));
+                lazyImages.forEach(img => {
+                    if (img.hasAttribute('data-src')) {
+                        imageObserver.observe(img);
+                    }
+                });
             }
         });
     </script>
