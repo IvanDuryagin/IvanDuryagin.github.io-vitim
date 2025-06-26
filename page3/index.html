@@ -49,32 +49,61 @@
             padding: 100px 0 60px;
             text-align: center;
         }
+        
+        /* Стили для карточек патентов */
+        .patent-badge {
+            background-color: var(--primary);
+            color: white;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .patent-details {
+            background-color: rgba(32, 191, 107, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .patent-details p {
+            margin: 5px 0;
+            color: var(--secondary);
+        }
+        
+        /* Обеспечиваем одинаковую высоту изображений */
+        .team-card .team-photo {
+            height: 200px;
+        }
     </style>
 </head>
 
 <body class="page-developments">
-    <!-- Header (такой же как на главной) -->
+    <!-- Header (полностью как на главной странице) -->
     <header class="header">
         <div class="container">
-            <div class="header-inner">
+            <div class="header-inner" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 0;">
                 <a href="./" class="logo">
                     <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="60" height="60" loading="lazy">
                 </a>
             
                 <nav class="nav">
-                    <ul>
-                        <li><a href="./" class="nav-btn">Главная</a></li>
-                        <li><a href="./page3" class="nav-btn active">Наши разработки</a></li>
-                        <li><a href="./page4" class="nav-btn">Каталог 3D моделей</a></li>
-                        <li><a href="./page5" class="nav-btn">Партнёры</a></li>
-                        <li><a href="https://t.me/vitim_support" class="contact-btn">Связаться</a></li>
+                    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 15px; align-items: center;">
+                        <li><a href="./" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Главная</a></li>
+                        <li><a href="./page3" class="nav-btn active" style="display: inline-block; padding: 10px 20px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Наши разработки</a></li>
+                        <li><a href="./page4" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Каталог 3D моделей</a></li>
+                        <li><a href="./page5" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Партнёры</a></li>
+                        <li><a href="https://t.me/vitim_support" class="contact-btn" style="display: inline-block; padding: 10px 20px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Связаться</a></li>
                     </ul>
                 </nav>
             
-                <button class="mobile-menu-toggle" aria-label="Меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <button class="mobile-menu-toggle" aria-label="Меню" style="display: none; background: none; border: none; cursor: pointer;">
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
+                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
                 </button>
             </div>
         </div>
@@ -93,21 +122,21 @@
         <!-- Патенты ВиТИМ -->
         <section class="section">
             <div class="container">
-                <div class="unified-block">
-                    <div class="block-header">
-                        <h2>Разработки проекта ВиТИМ</h2>
-                        <p class="section-subtitle">Запатентованные технологии в рамках проекта "Водоснабжение и технологии информационного моделирования"</p>
+                <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                    <div class="block-header" style="text-align: center; margin-bottom: 40px;">
+                        <h2 style="color: #333; margin-bottom: 10px;">Разработки проекта ВиТИМ</h2>
+                        <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Запатентованные технологии в рамках проекта "Водоснабжение и технологии информационного моделирования"</p>
                     </div>
 
-                    <div class="grid grid-2">
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="./assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy">
+                    <div class="grid grid-2" style="gap: 30px;">
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; height: 100%;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                             </div>
-                            <div class="team-info">
-                                <h3>Программа для автоматизации расчётов</h3>
-                                <p class="position">Свидетельство №2024690988</p>
-                                <p class="bio">Программный комплекс для автоматизированного расчёта систем водоснабжения с интеграцией в BIM-модели</p>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Программа для автоматизации расчётов</h3>
+                                <p class="patent-badge">Свидетельство №2024690988</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Программный комплекс для автоматизированного расчёта систем водоснабжения с интеграцией в BIM-модели</p>
                                 <div class="patent-details">
                                     <p><strong>Авторы:</strong> Сопилов В.В., к.т.н., Дурягин И.А.</p>
                                     <p><strong>Тип:</strong> Программа для ЭВМ</p>
@@ -115,14 +144,14 @@
                             </div>
                         </div>
 
-                        <div class="team-card">
-                            <div class="team-photo" style="background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; height: 100%;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
                                 <img src="./assets/img/software-icon.png" alt="Программное обеспечение" style="max-width: 50%;">
                             </div>
-                            <div class="team-info">
-                                <h3>BIM-плагин для Revit</h3>
-                                <p class="position">В разработке</p>
-                                <p class="bio">Специализированный плагин для автоматизации проектирования систем водоснабжения в Revit</p>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">BIM-плагин для Revit</h3>
+                                <p class="patent-badge">В разработке</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Специализированный плагин для автоматизации проектирования систем водоснабжения в Revit</p>
                                 <div class="patent-details">
                                     <p><strong>Разработчик:</strong> Дурягин И.А.</p>
                                     <p><strong>Статус:</strong> Бета-тестирование</p>
@@ -137,22 +166,22 @@
         <!-- Другие патенты -->
         <section class="section" style="background-color: #f9f9f9;">
             <div class="container">
-                <div class="unified-block">
-                    <div class="block-header">
-                        <h2>Другие разработки нашей команды</h2>
-                        <p class="section-subtitle">Научные изыскания в смежных направлениях строительства и проектирования</p>
+                <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                    <div class="block-header" style="text-align: center; margin-bottom: 40px;">
+                        <h2 style="color: #333; margin-bottom: 10px;">Другие разработки нашей команды</h2>
+                        <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Научные изыскания в смежных направлениях строительства и проектирования</p>
                     </div>
 
-                    <div class="grid grid-3">
+                    <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
                         <!-- Патент 1 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="./assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy">
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                             </div>
-                            <div class="team-info">
-                                <h3>Устройство для испытаний труб</h3>
-                                <p class="position">Патент №216976</p>
-                                <p class="bio">Устройство для испытаний труб на герметичность и прочность</p>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Устройство для испытаний труб</h3>
+                                <p class="patent-badge">Патент №216976</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Устройство для испытаний труб на герметичность и прочность</p>
                                 <div class="patent-details">
                                     <p><strong>Автор:</strong> Сопилов В.В., к.т.н.</p>
                                     <p><strong>Тип:</strong> Полезная модель</p>
@@ -161,14 +190,14 @@
                         </div>
 
                         <!-- Патент 2 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="./assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy">
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                             </div>
-                            <div class="team-info">
-                                <h3>Система очистки кровли</h3>
-                                <p class="position">Патент №229553</p>
-                                <p class="bio">Автоматизированная система очистки кровли от снега и наледи</p>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Система очистки кровли</h3>
+                                <p class="patent-badge">Патент №229553</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Автоматизированная система очистки кровли от снега и наледи</p>
                                 <div class="patent-details">
                                     <p><strong>Автор:</strong> Дурягин И.А.</p>
                                     <p><strong>Тип:</strong> Полезная модель</p>
@@ -177,14 +206,14 @@
                         </div>
 
                         <!-- Патент 3 -->
-                        <div class="team-card">
-                            <div class="team-photo">
-                                <img src="./assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy">
+                        <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                            <div class="team-photo" style="height: 200px; overflow: hidden;">
+                                <img src="./assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                             </div>
-                            <div class="team-info">
-                                <h3>Устройство для монтажа</h3>
-                                <p class="position">Патент №229881</p>
-                                <p class="bio">Устройство для монтажа трубопроводов в труднодоступных местах</p>
+                            <div class="team-info" style="padding: 15px; text-align: center;">
+                                <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Устройство для монтажа</h3>
+                                <p class="patent-badge">Патент №229881</p>
+                                <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Устройство для монтажа трубопроводов в труднодоступных местах</p>
                                 <div class="patent-details">
                                     <p><strong>Автор:</strong> Дурягин И.А.</p>
                                     <p><strong>Тип:</strong> Полезная модель</p>
@@ -199,38 +228,38 @@
         <!-- CTA Section (как на главной) -->
         <section class="section">
             <div class="container">
-                <div class="unified-block" style="background-color: var(--primary); color: var(--light); text-align: center; padding: 60px 40px;">
-                    <h2 style="color: var(--light); margin-bottom: 20px;">Заинтересованы в наших разработках?</h2>
+                <div class="unified-block" style="background-color: #20BF6B; color: white; text-align: center; padding: 60px 40px; border-radius: 12px;">
+                    <h2 style="color: white; margin-bottom: 20px;">Заинтересованы в наших разработках?</h2>
                     <p style="margin-bottom: 30px; font-size: 1.1rem; opacity: 0.9;">Свяжитесь с нами для получения дополнительной информации о возможностях сотрудничества</p>
-                    <div style="display: flex; gap: 15px; justify-content: center;">
-                        <a href="https://t.me/vitim_support" class="btn-primary" style="background-color: var(--light); color: var(--primary);">Написать в Telegram</a>
-                        <a href="mailto:duryagin1995@yandex.ru" class="btn-secondary" style="border-color: var(--light); color: var(--light);">Отправить email</a>
+                    <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="https://t.me/vitim_support" class="btn-primary" style="display: inline-block; padding: 12px 25px; background-color: white; border-radius: 8px; text-decoration: none; color: #20BF6B; font-weight: 500; transition: all 0.3s ease;">Написать в Telegram</a>
+                        <a href="mailto:duryagin1995@yandex.ru" class="btn-secondary" style="display: inline-block; padding: 12px 25px; background-color: transparent; border: 2px solid white; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Отправить email</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer (такой же как на главной) -->
-    <footer class="footer">
+    <!-- Footer (как на главной странице) -->
+    <footer class="footer" style="background-color: #333; color: white; padding: 60px 0;">
         <div class="container">
-            <div class="footer-inner">
+            <div class="footer-inner" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                 <div class="footer-col">
                     <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50" loading="lazy">
                     <p style="margin-top: 15px; color: rgba(255,255,255,0.7);">Водоснабжение и технологии информационного моделирования</p>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 style="color: var(--light);">Контакты</h3>
-                    <ul class="footer-nav">
-                        <li><a href="tel:+79062800808" style="color: rgba(255,255,255,0.7);">+7 (906) 280-08-08</a></li>
-                        <li><a href="mailto:duryagin1995@yandex.ru" style="color: rgba(255,255,255,0.7);">duryagin1995@yandex.ru</a></li>
-                        <li><a href="https://t.me/vitim_support" style="color: rgba(255,255,255,0.7);">Telegram</a></li>
+                    <h3 style="color: white; margin-bottom: 15px;">Контакты</h3>
+                    <ul class="footer-nav" style="list-style: none; padding: 0;">
+                        <li><a href="tel:+79062800808" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">+7 (906) 280-08-08</a></li>
+                        <li><a href="mailto:duryagin1995@yandex.ru" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">duryagin1995@yandex.ru</a></li>
+                        <li><a href="https://t.me/vitim_support" style="color: rgba(255,255,255,0.7); text-decoration: none; display: block; padding: 5px 0;">Telegram</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h3 style="color: var(--light);">Адрес</h3>
+                    <h3 style="color: white; margin-bottom: 15px;">Адрес</h3>
                     <p style="color: rgba(255,255,255,0.7);">Архангельск, ул. Воскресенская, д. 116</p>
                 </div>
             </div>
@@ -250,7 +279,6 @@
             if (menuToggle) {
                 menuToggle.addEventListener('click', function() {
                     nav.classList.toggle('active');
-                    menuToggle.classList.toggle('active');
                 });
             }
             
@@ -274,6 +302,20 @@
                     }
                 });
             }
+            
+            // Hover effects for cards
+            const cards = document.querySelectorAll('.team-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 6px rgba(0,0,0,0.05)';
+                });
+            });
         });
     </script>
 </body>
