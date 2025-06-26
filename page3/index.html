@@ -49,23 +49,11 @@
             padding: 100px 0 60px;
             text-align: center;
         }
-        .patent-card {
-            background: var(--light);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        .patent-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
     </style>
 </head>
 
 <body class="page-developments">
-    <!-- Header -->
+    <!-- Header (такой же как на главной) -->
     <header class="header">
         <div class="container">
             <div class="header-inner">
@@ -112,30 +100,32 @@
                     </div>
 
                     <div class="grid grid-2">
-                        <div class="patent-card">
-                            <div class="patent-image" style="height: 300px; overflow: hidden;">
-                                <img src="./assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="./assets/img/patent1.jpg" alt="Патент на программу для ЭВМ" loading="lazy">
                             </div>
-                            <div class="patent-info" style="padding: 25px;">
-                                <h3 style="margin-bottom: 15px;">Программа для автоматизации расчётов</h3>
-                                <p style="color: var(--gray); margin-bottom: 20px;">Программный комплекс для автоматизированного расчёта систем водоснабжения с интеграцией в BIM-модели</p>
-                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 15px; border-radius: 8px;">
-                                    <p style="margin: 0; font-size: 0.9rem;"><strong>Авторы:</strong> Сопилов В.В., к.т.н., Дурягин И.А.</p>
-                                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>Патент:</strong> Свидетельство о гос. регистрации программы для ЭВМ №2024690988</p>
+                            <div class="team-info">
+                                <h3>Программа для автоматизации расчётов</h3>
+                                <p class="position">Свидетельство №2024690988</p>
+                                <p class="bio">Программный комплекс для автоматизированного расчёта систем водоснабжения с интеграцией в BIM-модели</p>
+                                <div class="patent-details">
+                                    <p><strong>Авторы:</strong> Сопилов В.В., к.т.н., Дурягин И.А.</p>
+                                    <p><strong>Тип:</strong> Программа для ЭВМ</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="patent-card">
-                            <div class="patent-image" style="height: 300px; overflow: hidden; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
-                                <img src="./assets/img/software-icon.png" alt="Программное обеспечение" style="max-width: 50%; height: auto; opacity: 0.8;">
+                        <div class="team-card">
+                            <div class="team-photo" style="background-color: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                                <img src="./assets/img/software-icon.png" alt="Программное обеспечение" style="max-width: 50%;">
                             </div>
-                            <div class="patent-info" style="padding: 25px;">
-                                <h3 style="margin-bottom: 15px;">BIM-плагин для Revit</h3>
-                                <p style="color: var(--gray); margin-bottom: 20px;">Специализированный плагин для автоматизации проектирования систем водоснабжения в Revit</p>
-                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 15px; border-radius: 8px;">
-                                    <p style="margin: 0; font-size: 0.9rem;"><strong>Разработчик:</strong> Дурягин И.А.</p>
-                                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>Статус:</strong> В разработке</p>
+                            <div class="team-info">
+                                <h3>BIM-плагин для Revit</h3>
+                                <p class="position">В разработке</p>
+                                <p class="bio">Специализированный плагин для автоматизации проектирования систем водоснабжения в Revit</p>
+                                <div class="patent-details">
+                                    <p><strong>Разработчик:</strong> Дурягин И.А.</p>
+                                    <p><strong>Статус:</strong> Бета-тестирование</p>
                                 </div>
                             </div>
                         </div>
@@ -155,46 +145,49 @@
 
                     <div class="grid grid-3">
                         <!-- Патент 1 -->
-                        <div class="patent-card">
-                            <div class="patent-image" style="height: 250px; overflow: hidden;">
-                                <img src="./assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="./assets/img/patent2.jpg" alt="Патент на полезную модель" loading="lazy">
                             </div>
-                            <div class="patent-info" style="padding: 20px;">
-                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Устройство для испытаний труб</h3>
-                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Устройство для испытаний труб на герметичность и прочность</p>
-                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
-                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Сопилов В.В., к.т.н.</p>
-                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №216976</p>
+                            <div class="team-info">
+                                <h3>Устройство для испытаний труб</h3>
+                                <p class="position">Патент №216976</p>
+                                <p class="bio">Устройство для испытаний труб на герметичность и прочность</p>
+                                <div class="patent-details">
+                                    <p><strong>Автор:</strong> Сопилов В.В., к.т.н.</p>
+                                    <p><strong>Тип:</strong> Полезная модель</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Патент 2 -->
-                        <div class="patent-card">
-                            <div class="patent-image" style="height: 250px; overflow: hidden;">
-                                <img src="./assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="./assets/img/patent3.jpg" alt="Патент на полезную модель" loading="lazy">
                             </div>
-                            <div class="patent-info" style="padding: 20px;">
-                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Система очистки кровли</h3>
-                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Автоматизированная система очистки кровли от снега и наледи</p>
-                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
-                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Дурягин И.А.</p>
-                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №229553</p>
+                            <div class="team-info">
+                                <h3>Система очистки кровли</h3>
+                                <p class="position">Патент №229553</p>
+                                <p class="bio">Автоматизированная система очистки кровли от снега и наледи</p>
+                                <div class="patent-details">
+                                    <p><strong>Автор:</strong> Дурягин И.А.</p>
+                                    <p><strong>Тип:</strong> Полезная модель</p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Патент 3 -->
-                        <div class="patent-card">
-                            <div class="patent-image" style="height: 250px; overflow: hidden;">
-                                <img src="./assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="team-card">
+                            <div class="team-photo">
+                                <img src="./assets/img/patent4.jpg" alt="Патент на полезную модель" loading="lazy">
                             </div>
-                            <div class="patent-info" style="padding: 20px;">
-                                <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Устройство для монтажа</h3>
-                                <p style="color: var(--gray); margin-bottom: 15px; font-size: 0.9rem;">Устройство для монтажа трубопроводов в труднодоступных местах</p>
-                                <div style="background-color: rgba(32, 191, 107, 0.1); padding: 12px; border-radius: 8px;">
-                                    <p style="margin: 0; font-size: 0.85rem;"><strong>Автор:</strong> Дурягин И.А.</p>
-                                    <p style="margin: 5px 0 0; font-size: 0.85rem;"><strong>Патент:</strong> №229881</p>
+                            <div class="team-info">
+                                <h3>Устройство для монтажа</h3>
+                                <p class="position">Патент №229881</p>
+                                <p class="bio">Устройство для монтажа трубопроводов в труднодоступных местах</p>
+                                <div class="patent-details">
+                                    <p><strong>Автор:</strong> Дурягин И.А.</p>
+                                    <p><strong>Тип:</strong> Полезная модель</p>
                                 </div>
                             </div>
                         </div>
@@ -203,7 +196,7 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <!-- CTA Section (как на главной) -->
         <section class="section">
             <div class="container">
                 <div class="unified-block" style="background-color: var(--primary); color: var(--light); text-align: center; padding: 60px 40px;">
@@ -218,7 +211,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (такой же как на главной) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-inner">
@@ -243,7 +236,7 @@
             </div>
             
             <div class="footer-bottom" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">ВиТИМ 2025</p>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem;">© ВиТИМ 2023. Все права защищены</p>
             </div>
         </div>
     </footer>
@@ -260,16 +253,6 @@
                     menuToggle.classList.toggle('active');
                 });
             }
-            
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
             
             // Lazy loading images
             if ('IntersectionObserver' in window) {
