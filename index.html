@@ -25,6 +25,7 @@
     
     <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/styles/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Critical CSS (встроенный для ускорения первой отрисовки) -->
     <style>
@@ -54,10 +55,58 @@
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/hero-bg.jpg') center/cover;
             color: var(--light);
             min-height: 100vh;
+            padding-left: 30;
+            padding-left: clamp(60px, 5%, 20px);
+            padding-right: clamp(60px, 5%, 20px);
             display: flex;
             align-items: center;
             padding-top: 80px;
         }
+        .main_title {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 5vw, 5rem);
+            font-family: 'Roboto', sans-serif!important;
+            text-align: left;
+            line-height: 1;
+            margin-bottom: 20px;
+            
+        }
+        .lead{
+            color: #ffffff;
+            width: 50%;
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            max-width: 800px; 
+            
+        }
+        .btn-primary{
+            font-family: 'Roboto', sans-serif;
+            background-color: #20BF6B;
+            color: black;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-secondary{
+            font-family: 'Roboto', sans-serif;
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #f5f5f5cc;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
     </style>
 </head>
 
@@ -89,20 +138,41 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+        <section class="hero">
+            <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 80px); box-sizing: border-box;">
+                <div class="hero-content" style="text-align: center;">
+                    <p class="main_title" style="margin-bottom: 20px;">
+                        <strong>Водоснабжение</strong> и технологии информационного моделирования
+                    </p>
+                    <p class="lead" style="font-size: clamp(1rem, 2vw, 1.2rem); max-width: 800px;">
+                        Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем
+                    </p>
+
+                    <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: left; flex-wrap: wrap;">
+                        <a href="https://t.me/vitim_support" class="btn-primary" style="display: inline-block; background-color: #20BF6B; color: white; text-decoration: none; font-weight: 500; transition: background-color 0.3s;">
+                            Оставить заявку
+                        </a>
+                        <a href="./page4" class="btn-secondary" style="display: inline-block; background-color: #f5f5f5; color: #333; text-decoration: none; font-weight: 500; transition: background-color 0.3s;">
+                            Каталог 3D моделей
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- Hero Section 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Водоснабжение и технологии информационного моделирования</h1>
+            <div class="hero-content; text-align: center;">
+                <p class="main_title"><strong>Водоснабжение</strong> и технологии информационного моделирования</p>
                 <p class="lead">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
 
-                <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: center;">
-                    <a href="https://t.me/vitim_support" class="btn-primary" style="display: inline-block; padding: 12px 25px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Оставить заявку</a>
-                    <a href="./page4" class="btn-secondary" style="display: inline-block; padding: 12px 25px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease; border: none;">Каталог 3D моделей</a>
+                <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: left;">
+                    <a href="https://t.me/vitim_support" class="btn-primary">Оставить заявку</a>
+                    <a href="./page4" class="btn-secondary" class="btn-primary">Каталог 3D моделей</a>
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- О главном -->
 <!-- Объединённый блок "О главном" -->
@@ -226,9 +296,9 @@
                 <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
             </div>
 
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; justify-items: center;">
                 <!-- Член команды 1 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
                     <div class="team-photo" style="height: 200px; overflow: hidden;">
                         <img src="./assets/img/team1.jpg" alt="Посыпанов Сергей Валентинович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                     </div>
@@ -240,7 +310,7 @@
                 </div>
 
                 <!-- Член команды 2 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
                     <div class="team-photo" style="height: 200px; overflow: hidden;">
                         <img src="./assets/img/team2.jpg" alt="Сопилов Валерий Вячеславович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                     </div>
@@ -252,7 +322,7 @@
                 </div>
 
                 <!-- Член команды 3 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
                     <div class="team-photo" style="height: 200px; overflow: hidden;">
                         <img src="./assets/img/team3.jpg" alt="Дурягин Иван Александрович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                     </div>
@@ -264,7 +334,7 @@
                 </div>
 
                 <!-- Член команды 4 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
                     <div class="team-photo" style="height: 200px; overflow: hidden;">
                         <img src="./assets/img/team4.jpg" alt="Лялин Евгений Владимирович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                     </div>
@@ -276,7 +346,7 @@
                 </div>
 
                 <!-- Член команды 5 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
                     <div class="team-photo" style="height: 200px; overflow: hidden;">
                         <img src="./assets/img/team5.jpg" alt="Самарханов Кирилл Газинурович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
                     </div>
@@ -286,6 +356,10 @@
                         <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Программист-разработчик</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
 
                 <!-- Пустая карточка для выравнивания (если нужно) -->
                 <div class="team-card-empty" style="visibility: hidden;"></div>
@@ -367,41 +441,16 @@
                                 <p style="color: #666; line-height: 1.6; margin: 0;">+7 (906) 280 08 08<br>+7 (952) 250 70 69</p>
                             </div>
                         </div>
+                        <div class="contacts-info">
+                            <script 
+                                type="text/javascript" 
+                                charset="utf-8" 
+                                async 
+                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=518&amp;lang=ru_RU&amp;scroll=true">
+                            </script>
+                        </div>
                     </div>
                     
-                   <!-- <div class="contacts-map" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: 100%;">
-                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f7a9b3c..." loading="lazy" frameborder="0" style="width: 100%; height: 100%; min-height: 400px;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+            
 
 
-<a href="https://yandex.ru/maps/?pt=40.526910, 64.538925&z=17&l=map" target="_blank" style="display: block;">
-    <div class="contacts-map" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: 100%; position: relative;">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f7a9b3c..." 
-                loading="lazy" 
-                frameborder="0" 
-                style="width: 100%; height: 100%; min-height: 400px;">
-        </iframe>
-        <div style="position: absolute; inset: 0; z-index: 50; pointer-events: none; border-radius: 8px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);"></div>
-    </div>
-</a>
-
-
-
-<!--
-<div class="contacts-map" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: 100%; position: relative;">
-    <a href="https://yandex.ru/maps/?pt=64.538925,40.526910&z=17&l=map" 
-       target="_blank" 
-       style="position: absolute; top: 10px; right: 10px; background: #20BF6B; color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; text-decoration: none; z-index: 100;">
-        Открыть в Картах
-    </a>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1f7a9b3c..." 
-            loading="lazy" 
-            frameborder="0" 
-            style="width: 100%; height: 100%; min-height: 400px;">
-    </iframe>
-</div>
--->
