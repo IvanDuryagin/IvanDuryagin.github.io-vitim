@@ -5,6 +5,8 @@ my-website/
 │   └── page3.html
 ├── page4/
 │   └── page4.html
+├── page5/
+│   └── page5.html
 ├── assets/  
 │   ├── css/
 │   ├── js/
