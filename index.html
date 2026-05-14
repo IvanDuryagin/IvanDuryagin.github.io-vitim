@@ -1,457 +1,203 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Главная страница | ВиТИМ - Водоснабжение и BIM технологии</title>
-    <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="ВиТИМ - Водоснабжение и технологии информационного моделирования">
-    <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий">
-    <meta property="og:image" content="./assets/img/favicon1.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vitim.ru">
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon5.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon4.png">
-    <link rel="apple-touch-icon" href="./assets/img/favicon5.png">
-    
-    <!-- Preload critical resources -->
-    <link rel="preconnect" href="https://660c827d-ce04-4b4c-80d1-1d6200e5d4c5.selcdn.net">
-    <link rel="preload" href="./assets/styles/main.min.css" as="style">
-    <link rel="preload" href="./assets/fonts/roboto.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./assets/styles/main.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Critical CSS (встроенный для ускорения первой отрисовки) -->
-    <style>
-        :root {
-            --primary: #20BF6B;
-            --primary-dark: #1aa358;
-            --secondary: #333333;
-            --light: #ffffff;
-            --dark: #111111;
-            --gray: #777777;
-        }
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            margin: 0;
-        }
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--light);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/img/hero-bg.jpg') center/cover;
-            color: var(--light);
-            min-height: 100vh;
-            padding-left: 30;
-            padding-left: clamp(60px, 5%, 20px);
-            padding-right: clamp(60px, 5%, 20px);
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-        }
-        .main_title {
-            color: #ffffff;
-            font-size: clamp(1.5rem, 5vw, 5rem);
-            font-family: 'Roboto', sans-serif!important;
-            text-align: left;
-            line-height: 1;
-            margin-bottom: 20px;
-            
-        }
-        .lead{
-            color: #ffffff;
-            width: 50%;
-            font-size: 1.2rem;
-            font-family: 'Roboto', sans-serif;
-            text-align: left;
-            max-width: 800px; 
-            
-        }
-        .btn-primary{
-            font-family: 'Roboto', sans-serif;
-            background-color: #20BF6B;
-            color: black;
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        .btn-secondary{
-            font-family: 'Roboto', sans-serif;
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #f5f5f5cc;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        .team-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-    </style>
+  <meta charset="utf-8">
+  <title>ВиТИМ - Водоснабжение и BIM технологии</title>
+  <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ВиТИМ - Водоснабжение и BIM">
+  <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM">
+  <meta property="og:image" content="./assets/img/favicon1.png">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon5.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon4.png">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="page-home">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner" style="display: flex; align-items: center; justify-content: space-between; padding: 15px 0;">
-                <a href="./" class="logo">
-                    <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="60" height="60" loading="lazy">
-                </a>
-            
-                <nav class="nav">
-                    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 15px; align-items: center;">
-                        <li><a href="./" class="nav-btn active" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Главная</a></li>
-                        <li><a href="./page3" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Наши разработки</a></li>
-                        <li><a href="./page4" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Каталог 3D моделей</a></li>
-                        <li><a href="./page5" class="nav-btn" style="display: inline-block; padding: 10px 20px; background-color: #f5f5f5; border-radius: 8px; text-decoration: none; color: #333; font-weight: 500; transition: all 0.3s ease;">Партнёры</a></li>
-                        <li><a href="https://t.me/vitim_support" class="contact-btn" style="display: inline-block; padding: 10px 20px; background-color: #20BF6B; border-radius: 8px; text-decoration: none; color: white; font-weight: 500; transition: all 0.3s ease;">Связаться</a></li>
-                    </ul>
-                </nav>
-            
-                <button class="mobile-menu-toggle" aria-label="Меню" style="display: none; background: none; border: none; cursor: pointer;">
-                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
-                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
-                    <span style="display: block; width: 25px; height: 3px; background-color: #333; margin: 5px 0;"></span>
-                </button>
-            </div>
-        </div>
-    </header>
+<!-- Sticky Header -->
+<header class="sticky-header">
+  <div class="container header-container">
+    <a href="./" class="logo">
+      <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50">
+    </a>
+    <nav class="header-nav">
+      <a href="./" class="active">Главная</a>
+      <a href="./page3">Наши разработки</a>
+      <a href="./page4">Каталог 3D моделей</a>
+      <a href="./page5">Партнёры</a>
+      <a href="https://t.me/vitim_support" class="contact-btn">Связаться</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Тёмная тема">🌙 Тёмная тема</button>
+  </div>
+</header>
 
-        <section class="hero">
-            <div class="container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 80px); box-sizing: border-box;">
-                <div class="hero-content" style="text-align: center;">
-                    <p class="main_title" style="margin-bottom: 20px;">
-                        <strong>Водоснабжение</strong> и технологии информационного моделирования
-                    </p>
-                    <p class="lead" style="font-size: clamp(1rem, 2vw, 1.2rem); max-width: 800px;">
-                        Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем
-                    </p>
-
-                    <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: left; flex-wrap: wrap;">
-                        <a href="https://t.me/vitim_supply_bot" class="btn-primary" style="display: inline-block; background-color: #20BF6B; color: white; text-decoration: none; font-weight: 500; transition: background-color 0.3s;">
-                            Оставить заявку
-                        </a>
-                        <a href="./page4" class="btn-secondary" style="display: inline-block; background-color: #f5f5f5; color: #333; text-decoration: none; font-weight: 500; transition: background-color 0.3s;">
-                            Каталог 3D моделей
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- Hero Section 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content; text-align: center;">
-                <p class="main_title"><strong>Водоснабжение</strong> и технологии информационного моделирования</p>
-                <p class="lead">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
-
-                <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: left;">
-                    <a href="https://t.me/vitim_support" class="btn-primary">Оставить заявку</a>
-                    <a href="./page4" class="btn-secondary" class="btn-primary">Каталог 3D моделей</a>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
-    <!-- О главном -->
-<!-- Объединённый блок "О главном" -->
-<section class="section">
+<main>
+  <!-- Hero секция -->
+  <section class="hero">
     <div class="container">
-        <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-            <div class="block-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="color: #333; margin-bottom: 10px;">О главном</h2>
-                <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Наш подход к проектированию инженерных систем</p>
-            </div>
-
-            <div class="grid grid-2" style="gap: 30px;">
-                <!-- Блок 1 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12L10 17L20 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 style="color: #333; margin: 0;">Интеграция с САПР</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6;">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
-                </div>
-
-                <!-- Блок 2 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M9 10C9.55228 10 10 9.55228 10 9C10 8.44772 9.55228 8 9 8C8.44772 8 8 8.44772 8 9C8 9.55228 8.44772 10 9 10Z" fill="white"/>
-                                <path d="M15 10C15.5523 10 16 9.55228 16 9C16 8.44772 15.5523 8 15 8C14.4477 8 14 8.44772 14 9C14 9.55228 14.4477 10 15 10Z" fill="white"/>
-                                <path d="M9 16C9.55228 16 10 15.5523 10 15C10 14.4477 9.55228 14 9 14C8.44772 14 8 14.4477 8 15C8 15.5523 8.44772 16 9 16Z" fill="white"/>
-                                <path d="M15 16C15.5523 16 16 15.5523 16 15C16 14.4477 15.5523 14 15 14C14.4477 14 14 14.4477 14 15C14 15.5523 14.4477 16 15 16Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <h3 style="color: #333; margin: 0;">Комплексный подход</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6;">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
-                </div>
-            </div>
+      <div class="hero-content">
+        <h1 class="hero__title"><strong>Водоснабжение</strong> и технологии информационного моделирования</h1>
+        <p class="hero__subtitle">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
+        <div class="cta-buttons">
+          <a href="https://t.me/vitim_supply_bot" class="button button--primary">Оставить заявку</a>
+          <a href="./page4" class="button button--secondary">Каталог 3D моделей</a>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Объединённый блок "Возможности нашего продукта" -->
-<section class="section" style="background-color: #f9f9f9;">
+  <!-- О главном (объединённый блок) -->
+  <section class="section">
     <div class="container">
-        <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-            <div class="block-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="color: #333; margin-bottom: 10px;">Возможности нашего продукта</h2>
-                <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+        <h2 class="section-title">О главном</h2>
+        <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card__content">
+              <h3 class="card__title">Интеграция с САПР</h3>
+              <p class="card__desc">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
             </div>
-
-            <div class="grid grid-3" style="gap: 20px;">
-                <!-- Возможность 1 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">1</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Интеграция с популярными САПР</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p>
-                </div>
-
-                <!-- Возможность 2 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">2</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Преобразование форматов</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p>
-                </div>
-
-                <!-- Возможность 3 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">3</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Интеграция с BIM</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p>
-                </div>
-
-                <!-- Возможность 4 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">4</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Расчётные модули</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Встроенные модули для выполнения расчётов систем водоснабжения</p>
-                </div>
-
-                <!-- Возможность 5 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">5</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Автоматизация процессов</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Автоматизация рутинных задач, таких как создание отчётов и документации</p>
-                </div>
-
-                <!-- Возможность 6 -->
-                <div class="feature-card" style="background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 40px; height: 40px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; color: white; font-weight: bold; font-size: 1.2rem;">6</div>
-                        <h3 style="color: #333; margin: 0; font-size: 1.1rem;">Безопасность данных</h3>
-                    </div>
-                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Обеспечение защиты конфиденциальной информации и данных</p>
-                </div>
+          </div>
+          <div class="card">
+            <div class="card__content">
+              <h3 class="card__title">Комплексный подход</h3>
+              <p class="card__desc">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Команда проекта -->
-<section class="section">
+  <!-- Возможности нашего продукта -->
+  <section class="section" style="background-color: #f9f9f9;">
     <div class="container">
-        <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-            <div class="block-header" style="text-align: center; margin-bottom: 40px;">
-                <h2 style="color: #333; margin-bottom: 10px;">Команда проекта</h2>
-                <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
-            </div>
-
-            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; justify-items: center;">
-                <!-- Член команды 1 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
-                    <div class="team-photo" style="height: 200px; overflow: hidden;">
-                        <img src="./assets/img/team1.jpg" alt="Посыпанов Сергей Валентинович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                    </div>
-                    <div class="team-info" style="padding: 15px; text-align: center;">
-                        <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Посыпанов Сергей Валентинович</h3>
-                        <p class="position" style="color: #20BF6B; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem;">Научный руководитель</p>
-                        <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Профессор, доктор технических наук</p>
-                    </div>
-                </div>
-
-                <!-- Член команды 2 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
-                    <div class="team-photo" style="height: 200px; overflow: hidden;">
-                        <img src="./assets/img/team2.jpg" alt="Сопилов Валерий Вячеславович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                    </div>
-                    <div class="team-info" style="padding: 15px; text-align: center;">
-                        <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Сопилов Валерий Вячеславович</h3>
-                        <p class="position" style="color: #20BF6B; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem;">Руководитель проекта</p>
-                        <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Кандидат технических наук, инженер-исследователь</p>
-                    </div>
-                </div>
-
-                <!-- Член команды 3 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
-                    <div class="team-photo" style="height: 200px; overflow: hidden;">
-                        <img src="./assets/img/team3.jpg" alt="Дурягин Иван Александрович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                    </div>
-                    <div class="team-info" style="padding: 15px; text-align: center;">
-                        <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Дурягин Иван Александрович</h3>
-                        <p class="position" style="color: #20BF6B; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem;">Инженер проекта</p>
-                        <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Инженер систем водоснабжения, программист</p>
-                    </div>
-                </div>
-
-                <!-- Член команды 4 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
-                    <div class="team-photo" style="height: 200px; overflow: hidden;">
-                        <img src="./assets/img/team4.jpg" alt="Лялин Евгений Владимирович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                    </div>
-                    <div class="team-info" style="padding: 15px; text-align: center;">
-                        <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Лялин Евгений Владимирович</h3>
-                        <p class="position" style="color: #20BF6B; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem;">Инженер проекта</p>
-                        <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Инженер систем отопления, вентиляции</p>
-                    </div>
-                </div>
-
-                <!-- Член команды 5 -->
-                <div class="team-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: all 0.3s ease; width: 100%; max-width: 300px;">
-                    <div class="team-photo" style="height: 200px; overflow: hidden;">
-                        <img src="./assets/img/team5.jpg" alt="Самарханов Кирилл Газинурович" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
-                    </div>
-                    <div class="team-info" style="padding: 15px; text-align: center;">
-                        <h3 style="color: #333; margin-bottom: 8px; font-size: 1.1rem;">Самарханов Кирилл Газинурович</h3>
-                        <p class="position" style="color: #20BF6B; font-weight: 500; margin-bottom: 8px; font-size: 0.9rem;">Программист</p>
-                        <p class="bio" style="color: #666; font-size: 0.85rem; line-height: 1.4;">Программист-разработчик</p>
-                    </div>
-                </div>
-            </div>
+      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+        <h2 class="section-title">Возможности нашего продукта</h2>
+        <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+        <div class="grid grid-3">
+          <div class="card"><div class="card__content"><h3 class="card__title">1. Интеграция с популярными САПР</h3><p class="card__desc">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p></div></div>
+          <div class="card"><div class="card__content"><h3 class="card__title">2. Преобразование форматов</h3><p class="card__desc">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p></div></div>
+          <div class="card"><div class="card__content"><h3 class="card__title">3. Интеграция с BIM</h3><p class="card__desc">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p></div></div>
+          <div class="card"><div class="card__content"><h3 class="card__title">4. Расчётные модули</h3><p class="card__desc">Встроенные модули для выполнения расчётов систем водоснабжения</p></div></div>
+          <div class="card"><div class="card__content"><h3 class="card__title">5. Автоматизация процессов</h3><p class="card__desc">Автоматизация рутинных задач, таких как создание отчётов и документации</p></div></div>
+          <div class="card"><div class="card__content"><h3 class="card__title">6. Безопасность данных</h3><p class="card__desc">Обеспечение защиты конфиденциальной информации и данных</p></div></div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-                <!-- Пустая карточка для выравнивания (если нужно) -->
-                <div class="team-card-empty" style="visibility: hidden;"></div>
-            </div>
+  <!-- Команда проекта -->
+  <section class="section">
+    <div class="container">
+      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+        <h2 class="section-title">Команда проекта</h2>
+        <p class="section-subtitle">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
+        <div class="grid grid-4">
+          <div class="team-card card">
+            <div class="team-photo"><img src="./assets/img/team1.jpg" alt="Посыпанов С.В." loading="lazy"></div>
+            <div class="team-info"><h3>Посыпанов Сергей Валентинович</h3><p class="position">Научный руководитель</p><p class="bio">Профессор, доктор технических наук</p></div>
+          </div>
+          <div class="team-card card">
+            <div class="team-photo"><img src="./assets/img/team2.jpg" alt="Сопилов В.В." loading="lazy"></div>
+            <div class="team-info"><h3>Сопилов Валерий Вячеславович</h3><p class="position">Руководитель проекта</p><p class="bio">Кандидат технических наук, инженер-исследователь</p></div>
+          </div>
+          <div class="team-card card">
+            <div class="team-photo"><img src="./assets/img/team3.jpg" alt="Дурягин И.А." loading="lazy"></div>
+            <div class="team-info"><h3>Дурягин Иван Александрович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем водоснабжения, программист</p></div>
+          </div>
+          <div class="team-card card">
+            <div class="team-photo"><img src="./assets/img/team4.jpg" alt="Лялин Е.В." loading="lazy"></div>
+            <div class="team-info"><h3>Лялин Евгений Владимирович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем отопления, вентиляции</p></div>
+          </div>
+          <div class="team-card card">
+            <div class="team-photo"><img src="./assets/img/team5.jpg" alt="Самарханов К.Г." loading="lazy"></div>
+            <div class="team-info"><h3>Самарханов Кирилл Газинурович</h3><p class="position">Программист</p><p class="bio">Программист-разработчик</p></div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-    
-    <!-- Contacts Section -->
-    <section class="section" style="background-color: #f9f9f9;">
-        <div class="container">
-            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-                <div class="block-header" style="text-align: center; margin-bottom: 40px;">
-                    <h2 style="color: #333; margin-bottom: 10px;">Контакты</h2>
-                    <p class="section-subtitle" style="color: #666; font-size: 1.1rem;">Свяжитесь с нами удобным для вас способом</p>
-                </div>
+  <!-- Контакты и карта -->
+  <section class="section">
+    <div class="container">
+      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+        <h2 class="section-title">Контакты</h2>
+        <p class="section-subtitle">Свяжитесь с нами удобным для вас способом</p>
+        <div class="grid grid-2">
+          <div class="contacts-grid">
+            <div class="contact-item"><div class="contact-icon">🏠</div><div><h3>Адрес</h3><p>Архангельск, ул. Воскресенская, д. 116</p></div></div>
+            <div class="contact-item"><div class="contact-icon">⏰</div><div><h3>Время работы</h3><p>Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p></div></div>
+            <div class="contact-item"><div class="contact-icon">📞</div><div><h3>Телефоны</h3><p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p></div></div>
+          </div>
+          <div class="map-wrapper">
+            <iframe src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-                <div class="grid grid-2" style="gap: 30px;">
-                    <div class="contacts-info" style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                        <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 25px;">
-                            <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="color: #333; margin-bottom: 5px; font-size: 1.1rem;">Адрес</h3>
-                                <p style="color: #666; line-height: 1.6; margin: 0;">Архангельск, ул. Воскресенская, д. 116</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item" style="display: flex; align-items: flex-start; margin-bottom: 25px;">
-                            <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 style="color: #333; margin-bottom: 5px; font-size: 1.1rem;">Время работы</h3>
-                                <p style="color: #666; line-height: 1.6; margin: 0;">Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item" style="display: flex; align-items: flex-start;">
-                            <div style="width: 50px; height: 50px; background-color: #20BF6B; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">
-                                <!--<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 16.92V19.92C22.001 20.1984 21.9441 20.4735 21.8331 20.7274C21.7221 20.9813 21.5595 21.2083 21.3564 21.3929C21.1533 21.5775 20.9143 21.7154 20.6557 21.7975C20.3971 21.8796 20.1249 21.9041 19.8569 21.8692C16.9386 21.4231 14.1542 20.3736 11.6749 18.7889C9.27449 17.2576 7.23825 15.2214 5.70693 12.8209C4.1223 10.3417 3.07282 7.5573 2.62674 4.639C2.59185 4.371 2.61638 4.09883 2.69849 3.84024C2.7806 3.58165 2.9185 3.34265 3.1031 3.13955C3.2877 2.93645 3.51472 2.77387 3.76861 2.66287C4.0225 2.55187 4.29765 2.49496 4.576 2.49598H7.576C7.90387 2.49538 8.21917 2.62388 8.454 2.85298C8.68883 3.08208 8.8236 3.39352 8.827 3.71998C8.8619 4.48338 8.9738 5.24188 9.161 5.98398C9.24473 6.3208 9.21192 6.67549 9.06799 6.98998L8.02799 9.13598C7.90277 9.40992 7.88114 9.71774 7.96705 10.0057C8.05296 10.2936 8.2409 10.542 8.49799 10.703C10.0046 11.6244 11.7216 12.1571 13.488 12.251C13.8034 12.2695 14.1104 12.1684 14.351 11.968L16.416 10.345C16.6967 10.1119 17.0553 9.99774 17.418 10.026C18.172 10.093 18.922 10.2206 19.659 10.408C19.9626 10.4895 20.2345 10.6635 20.4339 10.9044C20.6333 11.1453 20.7499 11.4409 20.766 11.749V14.723" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>-->
+<footer class="page-footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">ВиТИМ</div>
+      <nav class="footer__nav">
+        <a href="./">Главная</a>
+        <a href="./page3">Разработки</a>
+        <a href="./page4">3D модели</a>
+        <a href="./page5">Партнёры</a>
+      </nav>
+      <div class="footer__copy">© 2026 ВиТИМ</div>
+    </div>
+  </div>
+</footer>
 
-                                <!--
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="6" y="3" width="12" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                                    <circle cx="12" cy="18" r="1" fill="currentColor"/>
-                                    <rect x="10" y="2" width="4" height="1" rx="0.5" fill="currentColor"/>
-                                </svg>
-                                -->
-                                <!--
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="7" y="2" width="10" height="20" rx="1.5" stroke="currentColor" stroke-width="2"/>
-                                    <rect x="9" y="1" width="6" height="1" rx="0.5" fill="currentColor"/>
-                                    <circle cx="12" cy="19" r="1" fill="currentColor"/>
-                                    <rect x="10" cy="5" width="4" height="0.5" fill="currentColor"/>
-                                </svg>
-                                -->
+<!-- Скрипты -->
+<script>
+  // Плавное появление секций
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('section-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => {
+    section.classList.add('section-fade');
+    observer.observe(section);
+  });
 
-                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="12" fill="#20BF6B"/>
-                                    <rect x="6" y="3" width="12" height="18" rx="2" stroke="white" stroke-width="2" fill="none"/>
-                                    <circle cx="12" cy="18" r="1" fill="white"/>
-                                    <rect x="10" y="2" width="4" height="1" rx="0.5" fill="white"/>
-                                </svg>
-                                
-                            </div>
-                            <div>
-                                <h3 style="color: #333; margin-bottom: 5px; font-size: 1.1rem;">Телефоны</h3>
-                                <p style="color: #666; line-height: 1.6; margin: 0;">+7 (906) 280 08 08<br>+7 (952) 250 70 69</p>
-                            </div>
-                        </div>
-                        <div class="contacts-info">
-                            <script 
-                                type="text/javascript" 
-                                charset="utf-8" 
-                                async 
-                                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=518&amp;lang=ru_RU&amp;scroll=true">
-                            </script>
-                        </div>
-                    </div>
-                    
-            
-
-
-
+  // Тёмная тема
+  const toggleBtn = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️ Светлая тема';
+    } else {
+      html.classList.remove('dark-mode');
+      toggleBtn.textContent = '🌙 Тёмная тема';
+    }
+    localStorage.setItem('vitim-theme', theme);
+  }
+  const saved = localStorage.getItem('vitim-theme');
+  if (saved) setTheme(saved);
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+  toggleBtn.addEventListener('click', () => {
+    setTheme(html.classList.contains('dark-mode') ? 'light' : 'dark');
+  });
+</script>
+</body>
+</html>
