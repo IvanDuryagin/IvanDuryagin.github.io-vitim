@@ -1,203 +1,211 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <title>ВиТИМ - Водоснабжение и BIM технологии</title>
-  <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="ВиТИМ - Водоснабжение и BIM">
-  <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM">
-  <meta property="og:image" content="./assets/img/favicon1.png">
-  
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon5.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon4.png">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="./assets/styles/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>ВиТИМ - Водоснабжение и BIM технологии</title>
+    <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="ВиТИМ - Водоснабжение и технологии информационного моделирования">
+    <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий">
+    <meta property="og:image" content="./assets/img/favicon1.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vitim.ru">
+    
+    <!-- Favicon (эмодзи для современного вида) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💧%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💧%3C/text%3E%3C/svg%3E">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Sticky Header -->
+<!-- Sticky Header с кнопкой переключения темы -->
 <header class="sticky-header">
-  <div class="container header-container">
-    <a href="./" class="logo">
-      <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50">
-    </a>
-    <nav class="header-nav">
-      <a href="./" class="active">Главная</a>
-      <a href="./page3">Наши разработки</a>
-      <a href="./page4">Каталог 3D моделей</a>
-      <a href="./page5">Партнёры</a>
-      <a href="https://t.me/vitim_support" class="contact-btn">Связаться</a>
-    </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Тёмная тема">🌙 Тёмная тема</button>
-  </div>
+    <div class="container header-container">
+        <a href="./" class="logo">
+            <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50" loading="lazy">
+        </a>
+        <nav class="header-nav">
+            <a href="./" class="active">Главная</a>
+            <a href="./page3">Наши разработки</a>
+            <a href="./page4">Каталог 3D моделей</a>
+            <a href="./page5">Партнёры</a>
+            <a href="https://t.me/vitim_support" class="contact-btn">Связаться</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
+    </div>
 </header>
 
 <main>
-  <!-- Hero секция -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero__title"><strong>Водоснабжение</strong> и технологии информационного моделирования</h1>
-        <p class="hero__subtitle">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
-        <div class="cta-buttons">
-          <a href="https://t.me/vitim_supply_bot" class="button button--primary">Оставить заявку</a>
-          <a href="./page4" class="button button--secondary">Каталог 3D моделей</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- О главном (объединённый блок) -->
-  <section class="section">
-    <div class="container">
-      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-        <h2 class="section-title">О главном</h2>
-        <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
-        <div class="grid grid-2">
-          <div class="card">
-            <div class="card__content">
-              <h3 class="card__title">Интеграция с САПР</h3>
-              <p class="card__desc">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
+    <!-- Hero секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero__title"><strong>Водоснабжение</strong> и технологии информационного моделирования</h1>
+                <p class="hero__subtitle">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
+                <div class="cta-buttons">
+                    <a href="https://t.me/vitim_supply_bot" class="button button--primary">Оставить заявку</a>
+                    <a href="./page4" class="button button--secondary">Каталог 3D моделей</a>
+                </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="card__content">
-              <h3 class="card__title">Комплексный подход</h3>
-              <p class="card__desc">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
+        </div>
+    </section>
+
+    <!-- О главном (объединённый блок) -->
+    <section class="section">
+        <div class="container">
+            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                <h2 class="section-title">О главном</h2>
+                <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Интеграция с САПР</h3>
+                            <p class="card__desc">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                            <h3 class="card__title">Комплексный подход</h3>
+                            <p class="card__desc">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Возможности нашего продукта -->
-  <section class="section" style="background-color: #f9f9f9;">
-    <div class="container">
-      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-        <h2 class="section-title">Возможности нашего продукта</h2>
-        <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
-        <div class="grid grid-3">
-          <div class="card"><div class="card__content"><h3 class="card__title">1. Интеграция с популярными САПР</h3><p class="card__desc">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p></div></div>
-          <div class="card"><div class="card__content"><h3 class="card__title">2. Преобразование форматов</h3><p class="card__desc">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p></div></div>
-          <div class="card"><div class="card__content"><h3 class="card__title">3. Интеграция с BIM</h3><p class="card__desc">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p></div></div>
-          <div class="card"><div class="card__content"><h3 class="card__title">4. Расчётные модули</h3><p class="card__desc">Встроенные модули для выполнения расчётов систем водоснабжения</p></div></div>
-          <div class="card"><div class="card__content"><h3 class="card__title">5. Автоматизация процессов</h3><p class="card__desc">Автоматизация рутинных задач, таких как создание отчётов и документации</p></div></div>
-          <div class="card"><div class="card__content"><h3 class="card__title">6. Безопасность данных</h3><p class="card__desc">Обеспечение защиты конфиденциальной информации и данных</p></div></div>
+    <!-- Возможности нашего продукта -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                <h2 class="section-title">Возможности нашего продукта</h2>
+                <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
+                <div class="grid grid-3">
+                    <div class="card"><div class="card__content"><h3 class="card__title">1. Интеграция с популярными САПР</h3><p class="card__desc">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p></div></div>
+                    <div class="card"><div class="card__content"><h3 class="card__title">2. Преобразование форматов</h3><p class="card__desc">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p></div></div>
+                    <div class="card"><div class="card__content"><h3 class="card__title">3. Интеграция с BIM</h3><p class="card__desc">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p></div></div>
+                    <div class="card"><div class="card__content"><h3 class="card__title">4. Расчётные модули</h3><p class="card__desc">Встроенные модули для выполнения расчётов систем водоснабжения</p></div></div>
+                    <div class="card"><div class="card__content"><h3 class="card__title">5. Автоматизация процессов</h3><p class="card__desc">Автоматизация рутинных задач, таких как создание отчётов и документации</p></div></div>
+                    <div class="card"><div class="card__content"><h3 class="card__title">6. Безопасность данных</h3><p class="card__desc">Обеспечение защиты конфиденциальной информации и данных</p></div></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Команда проекта -->
-  <section class="section">
-    <div class="container">
-      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-        <h2 class="section-title">Команда проекта</h2>
-        <p class="section-subtitle">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
-        <div class="grid grid-4">
-          <div class="team-card card">
-            <div class="team-photo"><img src="./assets/img/team1.jpg" alt="Посыпанов С.В." loading="lazy"></div>
-            <div class="team-info"><h3>Посыпанов Сергей Валентинович</h3><p class="position">Научный руководитель</p><p class="bio">Профессор, доктор технических наук</p></div>
-          </div>
-          <div class="team-card card">
-            <div class="team-photo"><img src="./assets/img/team2.jpg" alt="Сопилов В.В." loading="lazy"></div>
-            <div class="team-info"><h3>Сопилов Валерий Вячеславович</h3><p class="position">Руководитель проекта</p><p class="bio">Кандидат технических наук, инженер-исследователь</p></div>
-          </div>
-          <div class="team-card card">
-            <div class="team-photo"><img src="./assets/img/team3.jpg" alt="Дурягин И.А." loading="lazy"></div>
-            <div class="team-info"><h3>Дурягин Иван Александрович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем водоснабжения, программист</p></div>
-          </div>
-          <div class="team-card card">
-            <div class="team-photo"><img src="./assets/img/team4.jpg" alt="Лялин Е.В." loading="lazy"></div>
-            <div class="team-info"><h3>Лялин Евгений Владимирович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем отопления, вентиляции</p></div>
-          </div>
-          <div class="team-card card">
-            <div class="team-photo"><img src="./assets/img/team5.jpg" alt="Самарханов К.Г." loading="lazy"></div>
-            <div class="team-info"><h3>Самарханов Кирилл Газинурович</h3><p class="position">Программист</p><p class="bio">Программист-разработчик</p></div>
-          </div>
+    <!-- Команда проекта -->
+    <section class="section">
+        <div class="container">
+            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                <h2 class="section-title">Команда проекта</h2>
+                <p class="section-subtitle">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
+                <div class="grid grid-4">
+                    <div class="team-card card">
+                        <div class="team-photo"><img src="./assets/img/team1.jpg" alt="Посыпанов С.В." loading="lazy"></div>
+                        <div class="team-info"><h3>Посыпанов Сергей Валентинович</h3><p class="position">Научный руководитель</p><p class="bio">Профессор, доктор технических наук</p></div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="team-photo"><img src="./assets/img/team2.jpg" alt="Сопилов В.В." loading="lazy"></div>
+                        <div class="team-info"><h3>Сопилов Валерий Вячеславович</h3><p class="position">Руководитель проекта</p><p class="bio">Кандидат технических наук, инженер-исследователь</p></div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="team-photo"><img src="./assets/img/team3.jpg" alt="Дурягин И.А." loading="lazy"></div>
+                        <div class="team-info"><h3>Дурягин Иван Александрович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем водоснабжения, программист</p></div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="team-photo"><img src="./assets/img/team4.jpg" alt="Лялин Е.В." loading="lazy"></div>
+                        <div class="team-info"><h3>Лялин Евгений Владимирович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем отопления, вентиляции</p></div>
+                    </div>
+                    <div class="team-card card">
+                        <div class="team-photo"><img src="./assets/img/team5.jpg" alt="Самарханов К.Г." loading="lazy"></div>
+                        <div class="team-info"><h3>Самарханов Кирилл Газинурович</h3><p class="position">Программист</p><p class="bio">Программист-разработчик</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Контакты и карта -->
-  <section class="section">
-    <div class="container">
-      <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-        <h2 class="section-title">Контакты</h2>
-        <p class="section-subtitle">Свяжитесь с нами удобным для вас способом</p>
-        <div class="grid grid-2">
-          <div class="contacts-grid">
-            <div class="contact-item"><div class="contact-icon">🏠</div><div><h3>Адрес</h3><p>Архангельск, ул. Воскресенская, д. 116</p></div></div>
-            <div class="contact-item"><div class="contact-icon">⏰</div><div><h3>Время работы</h3><p>Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p></div></div>
-            <div class="contact-item"><div class="contact-icon">📞</div><div><h3>Телефоны</h3><p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p></div></div>
-          </div>
-          <div class="map-wrapper">
-            <iframe src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true" frameborder="0"></iframe>
-          </div>
+    <!-- Контакты и карта -->
+    <section class="section">
+        <div class="container">
+            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">Свяжитесь с нами удобным для вас способом</p>
+                <div class="grid grid-2">
+                    <div class="contacts-grid">
+                        <div class="contact-item"><div class="contact-icon">🏠</div><div><h3>Адрес</h3><p>Архангельск, ул. Воскресенская, д. 116</p></div></div>
+                        <div class="contact-item"><div class="contact-icon">⏰</div><div><h3>Время работы</h3><p>Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p></div></div>
+                        <div class="contact-item"><div class="contact-icon">📞</div><div><h3>Телефоны</h3><p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p></div></div>
+                    </div>
+                    <div class="map-wrapper">
+                        <iframe src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </main>
 
 <footer class="page-footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">ВиТИМ</div>
-      <nav class="footer__nav">
-        <a href="./">Главная</a>
-        <a href="./page3">Разработки</a>
-        <a href="./page4">3D модели</a>
-        <a href="./page5">Партнёры</a>
-      </nav>
-      <div class="footer__copy">© 2026 ВиТИМ</div>
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__logo">ВиТИМ</div>
+            <nav class="footer__nav">
+                <a href="./">Главная</a>
+                <a href="./page3">Разработки</a>
+                <a href="./page4">3D модели</a>
+                <a href="./page5">Партнёры</a>
+            </nav>
+            <div class="footer__copy">© 2026 ВиТИМ</div>
+        </div>
     </div>
-  </div>
 </footer>
 
-<!-- Скрипты -->
 <script>
-  // Плавное появление секций
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('section-visible');
-      }
+    // Плавное появление секций при скролле
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => {
+        section.classList.add('section-fade');
+        observer.observe(section);
     });
-  }, { threshold: 0.1 });
-  sections.forEach(section => {
-    section.classList.add('section-fade');
-    observer.observe(section);
-  });
 
-  // Тёмная тема
-  const toggleBtn = document.getElementById('theme-toggle');
-  const html = document.documentElement;
-  function setTheme(theme) {
-    if (theme === 'dark') {
-      html.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️ Светлая тема';
-    } else {
-      html.classList.remove('dark-mode');
-      toggleBtn.textContent = '🌙 Тёмная тема';
+    // Тёмная тема с сохранением в localStorage
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            htmlElement.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️ Светлая тема';
+        } else {
+            htmlElement.classList.remove('dark-mode');
+            toggleBtn.textContent = '🌙 Тёмная тема';
+        }
+        localStorage.setItem('vitim-theme', theme);
     }
-    localStorage.setItem('vitim-theme', theme);
-  }
-  const saved = localStorage.getItem('vitim-theme');
-  if (saved) setTheme(saved);
-  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
-  toggleBtn.addEventListener('click', () => {
-    setTheme(html.classList.contains('dark-mode') ? 'light' : 'dark');
-  });
+    const savedTheme = localStorage.getItem('vitim-theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+    }
+    toggleBtn.addEventListener('click', () => {
+        setTheme(htmlElement.classList.contains('dark-mode') ? 'light' : 'dark');
+    });
 </script>
 </body>
 </html>
