@@ -1,14 +1,28 @@
-my-website/
-├── vitim/
-│   └── index.html
-├── page3/ 
-│   └── page3.html
-├── page4/
-│   └── page4.html
-├── page5/
-│   └── page5.html
-├── assets/  
-│   ├── css/
-│   ├── js/
-│   └── images/
-└── README.md
+# tim-dpk.github.io
+project/
+├── index.html
+├── style.css
+└── img/
+    ├── favicon-16.png
+    ├── favicon-32.png
+    ├── step1.png
+    ├── step2.png
+    ├── step3.png
+    ├── step4.png
+    ├── step5.png
+    ├── step6.png
+    ├── team-labudin.jpg
+    ├── team-popov.png
+    ├── team-duryagin.png
+    ├── icon-address.png
+    ├── icon-clock.png
+    ├── icon-map.png
+    ├── icon-contacts.png
+    ├── letter1.png
+    ├── letter2.png
+    ├── letter3.png
+    ├── letter4.png
+    ├── letter5.png
+    ├── letter6.png
+    ├── patent1.jpeg
+    └── patent2.jpeg

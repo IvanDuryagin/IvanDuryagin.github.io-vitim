@@ -1,211 +1,442 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>ВиТИМ - Водоснабжение и BIM технологии</title>
-    <meta name="description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий. Разработка 3D моделей и программного обеспечения.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="ВиТИМ - Водоснабжение и технологии информационного моделирования">
-    <meta property="og:description" content="Профессиональное проектирование систем водоснабжения с использованием BIM технологий">
-    <meta property="og:image" content="./assets/img/favicon1.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vitim.ru">
-    
-    <!-- Favicon (эмодзи для современного вида) -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💧%3C/text%3E%3C/svg%3E">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💧%3C/text%3E%3C/svg%3E">
-    
-    <!-- Preload critical resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./assets/styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТИМ-ДПК — Перенос данных из BIM в расчётные программы</title>
+  <meta name="description" content="Программа для автоматического переноса данных об узлах ДПК из ТИМ-моделей в МКЭ-комплексы без потерь.">
+  <meta property="og:title" content="ТИМ-ДПК">
+  <meta property="og:description" content="Перенос данных об узлах ДПК из САПР в расчётные программы без потерь!">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Предзагрузка шрифтов (локально) -->
+  <link rel="preload" href="fonts/ubuntu.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/open-sans.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- Основной файл стилей -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌳%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<!-- Sticky Header с кнопкой переключения темы -->
 <header class="sticky-header">
-    <div class="container header-container">
-        <a href="./" class="logo">
-            <img src="./assets/img/favicon1.png" alt="ВиТИМ" width="50" height="50" loading="lazy">
-        </a>
-        <nav class="header-nav">
-            <a href="./" class="active">Главная</a>
-            <a href="./page3">Наши разработки</a>
-            <a href="./page4">Каталог 3D моделей</a>
-            <a href="./page5">Партнёры</a>
-            <a href="https://t.me/vitim_support" class="contact-btn">Связаться</a>
-        </nav>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙 Тёмная тема</button>
-    </div>
+  <div class="container header-container">
+    <a href="#" class="header-logo">ТИМ-ДПК</a>
+    <nav class="header-nav">
+      <a href="#about">О проекте</a>
+      <a href="#steps">Алгоритм</a>
+      <a href="#tech">Технологии</a>
+      <a href="#team">Команда</a>
+      <a href="#partners">Партнёры</a>
+      <a href="#developments">Разработки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">Тёмная тема</button>
+  </div>
 </header>
 
-<main>
-    <!-- Hero секция -->
+  
+  <main class="site-main">
+    <!-- Hero section (бывший call-to-action) -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero__title"><strong>Водоснабжение</strong> и технологии информационного моделирования</h1>
-                <p class="hero__subtitle">Разрабатываем 3D модели элементов инженерных систем. Проектируем системы водоснабжения, водоотведения, пожаротушения. Создаём ПО для проектирования инженерных систем</p>
-                <div class="cta-buttons">
-                    <a href="https://t.me/vitim_supply_bot" class="button button--primary">Оставить заявку</a>
-                    <a href="./page4" class="button button--secondary">Каталог 3D моделей</a>
-                </div>
-            </div>
-        </div>
+      <div class="container">
+        <h1 class="hero__title">ТИМ-ДПК</h1>
+        <p class="hero__subtitle">Перенос данных об узлах ДПК из САПР в расчётные программы без потерь!</p>
+        <a href="https://disk.yandex.ru/i/OefFQkBtnTqfcg" class="button button--primary" target="_blank" rel="noopener">Скачать информационный лист</a>
+      </div>
     </section>
 
-    <!-- О главном (объединённый блок) -->
-    <section class="section">
-        <div class="container">
-            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-                <h2 class="section-title">О главном</h2>
-                <p class="section-subtitle">Наш подход к проектированию инженерных систем</p>
-                <div class="grid grid-2">
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="card__title">Интеграция с САПР</h3>
-                            <p class="card__desc">Команда проекта «ВиТИМ» занимается разработкой программного обеспечения, предназначенного для эффективного обмена данными между системами автоматизированного проектирования (САПР) и программами для расчёта систем водоснабжения при использовании IFC свойств.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <h3 class="card__title">Комплексный подход</h3>
-                            <p class="card__desc">Своей целью мы ставим обеспечение комплексного подхода в решении задач, при проектировании систем водоснабжения, повышение эффективности и точности в работе инженеров, обработку вопросов, связанных с обслуживанием систем после ввода в эксплуатацию.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- О главном -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">О проекте</h2>
+        <div class="about__content">
+          <p>«ТИМ-ДПК» — это программа с частично открытым исходным кодом, которая автоматически переносит данные об узлах соединений из BIM-моделей (Archicad, Revit) в форматы, понятные расчётным МКЭ-комплексам (ANSYS, SCAD).</p>
+          <p>Мы превращаем ручной, многочасовой процесс выявления и описания стыков ДПК-панелей в автоматизированный конвейер: IFC → JSON → готовый скрипт для расчёта. Цель — ускорить подготовку расчётных схем и исключить ошибки ручного ввода.</p>
         </div>
+      </div>
     </section>
 
-    <!-- Возможности нашего продукта -->
-    <section class="section" style="background-color: #f9f9f9;">
-        <div class="container">
-            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-                <h2 class="section-title">Возможности нашего продукта</h2>
-                <p class="section-subtitle">Наша команда занимается разработкой программного обеспечения для проектирования систем водоснабжения гражданских объектов</p>
-                <div class="grid grid-3">
-                    <div class="card"><div class="card__content"><h3 class="card__title">1. Интеграция с популярными САПР</h3><p class="card__desc">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта</p></div></div>
-                    <div class="card"><div class="card__content"><h3 class="card__title">2. Преобразование форматов</h3><p class="card__desc">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости</p></div></div>
-                    <div class="card"><div class="card__content"><h3 class="card__title">3. Интеграция с BIM</h3><p class="card__desc">Поддержка интеграции с BIM-технологиями для создания комплексных моделей</p></div></div>
-                    <div class="card"><div class="card__content"><h3 class="card__title">4. Расчётные модули</h3><p class="card__desc">Встроенные модули для выполнения расчётов систем водоснабжения</p></div></div>
-                    <div class="card"><div class="card__content"><h3 class="card__title">5. Автоматизация процессов</h3><p class="card__desc">Автоматизация рутинных задач, таких как создание отчётов и документации</p></div></div>
-                    <div class="card"><div class="card__content"><h3 class="card__title">6. Безопасность данных</h3><p class="card__desc">Обеспечение защиты конфиденциальной информации и данных</p></div></div>
-                </div>
+    <!-- Алгоритм работы (бывший product-list) -->
+    <section class="steps" id="steps">
+      <div class="container">
+        <h2 class="section-title">Алгоритм работы</h2>
+        <div class="steps__list">
+          <article class="step-card">
+            <img src="img/step1.png" alt="Шаг 1" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 1. Экспорт BIM-модели в IFC</h3>
+              <p class="step-card__desc">Пользователь экспортирует трёхмерную модель из Archicad, Revit или Renga в открытый формат IFC, сохраняя геометрию, слоистую структуру ДПК-панелей и данные о нагрузках.</p>
             </div>
+          </article>
+          <article class="step-card">
+            <img src="img/step2.png" alt="Шаг 2" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 2. Загрузка IFC в ядро «ТИМ-ДПК»</h3>
+              <p class="step-card__desc">Программа парсит IFC-файл, идентифицирует все CLT/ДПК-панели (объекты IfcPlate) и извлекает их геометрию, толщину, ориентацию слоёв и уникальные идентификаторы.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <img src="img/step3.png" alt="Шаг 3" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 3. Обнаружение и классификация узлов соединений</h3>
+              <p class="step-card__desc">Алгоритм пространственного анализа находит места контакта панелей (пересечение ограничивающих параллелепипедов, общие грани) и определяет тип узла (угловой, Т-образный, крестовый, нахлёст).</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <img src="img/step4.png" alt="Шаг 4" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 4. Формирование JSON-спецификации</h3>
+              <p class="step-card__desc">На основе собранных данных создаётся структурированный JSON-файл — машиночитаемое техническое задание, содержащее все характеристики узлов, материалов и нагрузок.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <img src="img/step5.png" alt="Шаг 5" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 5. Генерация скрипта для целевого МКЭ-пакета</h3>
+              <p class="step-card__desc">Конвертер преобразует JSON в APDL-скрипт для ANSYS, командный файл для SCAD/LIRA или скрипт для Rhino+Grasshopper.</p>
+            </div>
+          </article>
+          <article class="step-card">
+            <img src="img/step6.png" alt="Шаг 6" class="step-card__image" loading="lazy">
+            <div class="step-card__body">
+              <h3 class="step-card__title">Шаг 6. Расчёт в конечно-элементном комплексе</h3>
+              <p class="step-card__desc">Инженер запускает сгенерированный скрипт в выбранной среде и получает готовую конечно-элементную модель с назначенными свойствами, контактами и нагрузками, после чего выполняет расчёт и анализирует результаты.</p>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <!-- Технологии и стек (бывший faq) -->
+    <section class="tech" id="tech">
+      <div class="container">
+        <h2 class="section-title">Технологии и стек</h2>
+        <dl class="tech__list">
+          <div class="tech__item">
+            <dt>Языки программирования</dt>
+            <dd>Python (основной), библиотека ifcopenshell</dd>
+          </div>
+          <div class="tech__item">
+            <dt>Форматы данных</dt>
+            <dd>IFC (ISO 16739), JSON</dd>
+          </div>
+          <div class="tech__item">
+            <dt>Целевое ПО</dt>
+            <dd>ANSYS (APDL), SCAD Office, Rhino+Grasshopper</dd>
+          </div>
+          <div class="tech__item">
+            <dt>Open source</dt>
+            <dd><a href="https://github.com/IvanDuryagin/dpk-tim" target="_blank" rel="noopener">https://github.com/IvanDuryagin/dpk-tim</a></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Призыв к участию -->
+    <section class="cta-secondary">
+      <div class="container container--narrow">
+        <h2 class="section-title section-title--center">Принять участие в разработке!</h2>
+        <a href="https://github.com/IvanDuryagin/dpk-tim" class="button button--primary button--center" target="_blank" rel="noopener">Репозиторий проекта на GitHub</a>
+      </div>
     </section>
 
     <!-- Команда проекта -->
-    <section class="section">
-        <div class="container">
-            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-                <h2 class="section-title">Команда проекта</h2>
-                <p class="section-subtitle">Мы собрали команду из молодых профессионалов в области BIM-проектирования</p>
-                <div class="grid grid-4">
-                    <div class="team-card card">
-                        <div class="team-photo"><img src="./assets/img/team1.jpg" alt="Посыпанов С.В." loading="lazy"></div>
-                        <div class="team-info"><h3>Посыпанов Сергей Валентинович</h3><p class="position">Научный руководитель</p><p class="bio">Профессор, доктор технических наук</p></div>
-                    </div>
-                    <div class="team-card card">
-                        <div class="team-photo"><img src="./assets/img/team2.jpg" alt="Сопилов В.В." loading="lazy"></div>
-                        <div class="team-info"><h3>Сопилов Валерий Вячеславович</h3><p class="position">Руководитель проекта</p><p class="bio">Кандидат технических наук, инженер-исследователь</p></div>
-                    </div>
-                    <div class="team-card card">
-                        <div class="team-photo"><img src="./assets/img/team3.jpg" alt="Дурягин И.А." loading="lazy"></div>
-                        <div class="team-info"><h3>Дурягин Иван Александрович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем водоснабжения, программист</p></div>
-                    </div>
-                    <div class="team-card card">
-                        <div class="team-photo"><img src="./assets/img/team4.jpg" alt="Лялин Е.В." loading="lazy"></div>
-                        <div class="team-info"><h3>Лялин Евгений Владимирович</h3><p class="position">Инженер проекта</p><p class="bio">Инженер систем отопления, вентиляции</p></div>
-                    </div>
-                    <div class="team-card card">
-                        <div class="team-photo"><img src="./assets/img/team5.jpg" alt="Самарханов К.Г." loading="lazy"></div>
-                        <div class="team-info"><h3>Самарханов Кирилл Газинурович</h3><p class="position">Программист</p><p class="bio">Программист-разработчик</p></div>
-                    </div>
-                </div>
+    <section class="team team--gradient" id="team">
+      <div class="container">
+        <h2 class="section-title">Команда проекта</h2>
+        <div class="team__grid">
+          <div class="team-member">
+            <div class="team-member__photo">
+              <img src="img/team-labudin.jpg" alt="Лабудин Борис Васильевич" loading="lazy">
             </div>
+            <h3 class="team-member__name">Лабудин Борис Васильевич</h3>
+            <p class="team-member__role">Научный руководитель</p>
+            <p class="team-member__desc">доктор технических наук, профессор, член-корреспондент Российской академии архитектуры и строительных наук</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member__photo">
+              <img src="img/team-popov.png" alt="Попов Егор Вячеславович" loading="lazy">
+            </div>
+            <h3 class="team-member__name">Попов Егор Вячеславович</h3>
+            <p class="team-member__role">Руководитель проекта</p>
+            <p class="team-member__desc">кандидат технических наук, доцент кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member__photo">
+              <img src="img/team-duryagin.png" alt="Дурягин Иван Александрович" loading="lazy">
+            </div>
+            <h3 class="team-member__name">Дурягин Иван Александрович</h3>
+            <p class="team-member__role">Инженер проекта</p>
+            <p class="team-member__desc">аспирант кафедры "Инженерных конструкций, архитектуры и графики", САФУ им. М.В. Ломоносова</p>
+          </div>
         </div>
+      </div>
+    </section>
+    
+    <!-- Наши партнёры -->
+    <section class="partners" id="partners">
+      <div class="container">
+        <h2 class="section-title">Партнёры проекта</h2>
+        <div class="partners__grid">
+          <div class="partner-card">
+            <img src="img/letter1.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ООО «ГражданПроект»</h3>
+              <p class="partner-card__type">Проектная организация (г. Архангельск)</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <img src="img/letter2.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ООО «Инженерно-технические решения и снабжение»</h3>
+              <p class="partner-card__type">Проектная организация (г. Северодвинск, Архангельской обл.)</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <img src="img/letter3.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ООО «Обследование и экспертиза зданий и сооружений»</h3>
+              <p class="partner-card__type">Экспертная организация (г. Архангельск)</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <img src="img/letter4.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ООО «СтройГрадСервис»</h3>
+              <p class="partner-card__type">Проектная организация (г. Россошь, Воронежской обл.)</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <img src="img/letter5.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ГАУ «Штаб молодёжных трудовых отрядов Архангельской области»</h3>
+              <p class="partner-card__type">Государственное автономное учреждение (г. Архангельск)</p>
+            </div>
+          </div>
+          <div class="partner-card">
+            <img src="img/letter6.jpg" alt="Письмо о заинтересованности" class="partner-card__image" loading="lazy">
+            <div class="partner-card__info">
+              <h3 class="partner-card__title">ИП Яковлева Елена Васильевна</h3>
+              <p class="partner-card__type">Индивидуальный предприниматель в сфере проектирования (г. Архангельск)</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Контакты и карта -->
-    <section class="section">
-        <div class="container">
-            <div class="unified-block" style="background-color: #f5f5f5; border-radius: 12px; padding: 40px;">
-                <h2 class="section-title">Контакты</h2>
-                <p class="section-subtitle">Свяжитесь с нами удобным для вас способом</p>
-                <div class="grid grid-2">
-                    <div class="contacts-grid">
-                        <div class="contact-item"><div class="contact-icon">🏠</div><div><h3>Адрес</h3><p>Архангельск, ул. Воскресенская, д. 116</p></div></div>
-                        <div class="contact-item"><div class="contact-icon">⏰</div><div><h3>Время работы</h3><p>Пн—Пт: 9:00—18:00<br>Сб—Вс: выходные</p></div></div>
-                        <div class="contact-item"><div class="contact-icon">📞</div><div><h3>Телефоны</h3><p>+7 (906) 280 08 08<br>+7 (952) 250 70 69</p></div></div>
-                    </div>
-                    <div class="map-wrapper">
-                        <iframe src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cde1536fb44bb751848165458366b5f61244ff93ee523a10884282b21c0b6db&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
+    <!-- Наши разработки (патенты) -->
+    <section class="developments" id="developments">
+      <div class="container">
+        <h2 class="section-title section-title--center">Наши разработки</h2>
+        <div class="developments__grid">
+          <div class="patent-card">
+            <img src="img/patent2.jpeg" alt="Патент на полезную модель RU 229881" class="patent-card__image" loading="lazy">
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Узловое комбинированное соединение деревокомпозитных конструкций</h3>
+              <div class="patent-card__number">RU 229881 U1, 31.10.2024. Заявка № 2024114143 от 24.05.2024.</div>
+              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Починков М.В., Дурягин И.А.</p>
             </div>
+          </div>
+          <div class="patent-card">
+            <img src="img/patent1.jpeg" alt="Патент на полезную модель RU 229553" class="patent-card__image" loading="lazy">
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Составной деревокомпозитный элемент на когтевых шайбах</h3>
+              <div class="patent-card__number">RU 229553 U1, 11.10.2024. Заявка № 2024114142 от 24.05.2024.</div>
+              <p class="patent-card__desc">Попов Е.В., Лабудин Б.В., Столыпин Д.А., Чередниченко В.В., Копров О.В., Дурягин И.А.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-</main>
+    
+    <!-- Контакты -->
+    <section class="contacts" id="contacts">
+      <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="contacts__grid">
+          <div class="contact-item">
+            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">🏠</div>
+            <div class="contact-item__content">
+              <h3 class="contact-item__title">Адрес</h3>
+              <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра "Инженерных конструкций, архитектуры и графики", САФУ им М.В. Ломоносова)</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">📧</div>
+            <div class="contact-item__content">
+              <h3 class="contact-item__title">Свяжитесь с нами</h3>
+              <p>+7 (952) 250 70 69<br>duryagin1995@yandex.ru</p>
+              <p>+7 (963) 200 93 04<br>egpv1989@mail.ru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<footer class="page-footer">
+    <!-- Карта -->
+    <section class="map">
+      <div class="map__container">
+        <iframe 
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9656a015b252f015a0b6656f6b3f0c5ac35fe5002d817dbff61744ae1c24b570&amp;source=constructor" 
+          width="100%" 
+          height="320" 
+          frameborder="0" 
+          allowfullscreen 
+          style="display:block; border:0;"
+          title="Карта расположения кафедры САФУ в Архангельске">
+        </iframe>
+      </div>
+    </section>
+
+  <footer class="page-footer">
     <div class="container">
-        <div class="footer__inner">
-            <div class="footer__logo">ВиТИМ</div>
-            <nav class="footer__nav">
-                <a href="./">Главная</a>
-                <a href="./page3">Разработки</a>
-                <a href="./page4">3D модели</a>
-                <a href="./page5">Партнёры</a>
-            </nav>
-            <div class="footer__copy">© 2026 ВиТИМ</div>
-        </div>
+      <div class="footer__inner">
+        <span class="footer__logo">ТИМ-ДПК</span>
+        <nav class="footer__nav">
+          <a href="#about">О проекте</a>
+          <a href="#steps">Алгоритм работы</a>
+          <a href="#tech">Технологии</a>
+          <a href="#team">Команда</a>
+          <a href="#partners">Партнёры</a>
+          <a href="#developments">Разработки</a>
+        </nav>
+        <small class="footer__copy"> ТИМ-ДПК 2026</small>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script>
-    // Плавное появление секций при скролле
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('section-visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    sections.forEach(section => {
-        section.classList.add('section-fade');
-        observer.observe(section);
-    });
+<!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modal-img" class="modal-img" src="" alt="">
+      <div id="modal-text" class="modal-text"></div>
+    </div>
+  </div>
 
-    // Тёмная тема с сохранением в localStorage
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
-    function setTheme(theme) {
-        if (theme === 'dark') {
-            htmlElement.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️ Светлая тема';
-        } else {
-            htmlElement.classList.remove('dark-mode');
-            toggleBtn.textContent = '🌙 Тёмная тема';
-        }
-        localStorage.setItem('vitim-theme', theme);
-    }
-    const savedTheme = localStorage.getItem('vitim-theme');
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setTheme('dark');
-    }
-    toggleBtn.addEventListener('click', () => {
-        setTheme(htmlElement.classList.contains('dark-mode') ? 'light' : 'dark');
+  <script>
+  // Модальное окно для карточек партнёров и патентов
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalText = document.getElementById('modal-text');
+  const closeBtn = document.querySelector('.modal-close');
+
+  function openModal(imgSrc, title, extraText) {
+    modal.style.display = 'block';
+    modalImg.src = imgSrc;
+    modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
+  }
+
+// Назначаем обработчики на карточки членов команды
+document.querySelectorAll('.team-member').forEach(card => {
+  card.addEventListener('click', () => {
+    const img = card.querySelector('.team-member__photo img').src;   // ← исправлено
+    const title = card.querySelector('.team-member__name').innerText;
+    const desc = card.querySelector('.team-member__desc').innerText;
+    openModal(img, title, desc);
+  });
+  card.style.cursor = 'pointer';
+});
+    
+  // Назначаем обработчики на карточки партнёров
+  document.querySelectorAll('.partner-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.partner-card__image').src;
+      const title = card.querySelector('.partner-card__title').innerText;
+      const type = card.querySelector('.partner-card__type').innerText;
+      openModal(img, title, type);
     });
+    card.style.cursor = 'pointer';
+  });
+
+  // Назначаем обработчики на карточки патентов
+  document.querySelectorAll('.patent-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('.patent-card__image').src;
+      const title = card.querySelector('.patent-card__title').innerText;
+      const number = card.querySelector('.patent-card__number').innerText;
+      const desc = card.querySelector('.patent-card__desc').innerText;
+      openModal(img, title, `${number}<br><br>${desc}`);
+    });
+    card.style.cursor = 'pointer';
+  });
+
+  // Закрытие по крестику
+  closeBtn.onclick = () => modal.style.display = 'none';
+  // Закрытие по клику вне контента
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
 </script>
+    
+  <script>
+  // Плавное появление секций при скролле
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  
+    sections.forEach(section => {
+      section.classList.add('section-fade');
+      observer.observe(section);
+    });
+  </script>
+
+  <script>
+  (function() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement; // <html>
+    
+    // Функция применения темы
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        htmlElement.classList.add('dark-mode');
+        if (toggleBtn) toggleBtn.textContent = 'Светлая тема';
+      } else {
+        htmlElement.classList.remove('dark-mode');
+        if (toggleBtn) toggleBtn.textContent = 'Тёмная тема';
+      }
+      localStorage.setItem('theme', theme);
+    }
+    
+    // Получение сохранённой темы или системной
+    function getPreferredTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || saved === 'light') return saved;
+      // Если нет сохранённого – проверить системную тему
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    // Инициализация
+    const initialTheme = getPreferredTheme();
+    setTheme(initialTheme);
+    
+    // Обработчик на кнопку
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const isDark = htmlElement.classList.contains('dark-mode');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    }
+    
+    // (Опционально) Следить за изменением системной темы, если нет ручного выбора
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      // Только если пользователь явно не выбирал тему (сохранённая отсутствует)
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  })();
+</script>
+    
 </body>
 </html>
