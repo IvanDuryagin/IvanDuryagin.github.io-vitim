@@ -751,7 +751,7 @@ section {
 
   /* Номер патента (был с зелёным фоном) – сохранить читаемость */
   .patent-card__number {
-    background: rgba(32, 191, 107, 0.3);
+    background: rgba(163, 194, 241, 0.3);
     color: var(--color-text);
   }
 
