@@ -9,7 +9,7 @@ project/
     ├── step4.png
     ├── step5.png
     ├── step6.png
-    ├── team-posypanov.jpg
+    ├── team-posypanov.png
     ├── team-sopilov.png
     ├── team-duryagin.png
     ├── team-lyalin.png
