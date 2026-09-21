@@ -204,6 +204,24 @@ section {
   color: var(--color-text-muted);
 }
 
+/* Научные публикации: название и ссылка идут вплотную,
+   отступ остаётся только после ссылки */
+.about__content .pub-title,
+.about__content .pub-link {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.about__content .pub-link {
+  margin-bottom: 1.5rem;
+}
+
+.about__content .pub-link a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ===== Steps (бывший product-list) ===== */
 .steps__list {
   display: grid;
