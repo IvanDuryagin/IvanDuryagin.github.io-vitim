@@ -447,9 +447,39 @@ section {
 }
 
 .team__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 24px;              /* место под тень карточек и скроллбар */
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 4px;
+  -webkit-overflow-scrolling: touch;  /* плавный скролл на iOS */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.team-member {
+  flex: 0 0 280px;                     /* фиксированная ширина карточки */
+  scroll-snap-align: start;
+}
+
+/* Стилизация скроллбара (WebKit) */
+.team__grid::-webkit-scrollbar {
+  height: 6px;
+}
+.team__grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.team__grid::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    flex: 0 0 240px;                   /* компактнее на узких экранах */
+  }
 }
 
 .team-member {
@@ -664,22 +694,39 @@ section {
   background-color: var(--color-light);
 }
 
-.partners .container {
-  container-type: inline-size;
-  container-name: partners;
-}
-
 .partners__grid {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 24px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
 }
 
-@container partners (min-width: 600px) {
-  .partners__grid { grid-template-columns: repeat(2, 1fr); }
+.partner-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
 }
-@container partners (min-width: 980px) {
-  .partners__grid { grid-template-columns: repeat(3, 1fr); }
+
+.partners__grid::-webkit-scrollbar {
+  height: 6px;
+}
+.partners__grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.partners__grid::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+@media (max-width: 480px) {
+  .partner-card {
+    flex: 0 0 260px;
+  }
 }
 
 .partner-card {
@@ -722,15 +769,8 @@ section {
 }
 
 @media (max-width: 768px) {
-  .partners__grid {
-    gap: 20px;
-  }
-  .partner-card__info {
-    padding: 15px;
-  }
-  .partner-card__title {
-    font-size: 1rem;
-  }
+  .partner-card__info { padding: 15px; }
+  .partner-card__title { font-size: 1rem; }
 }
 
 /* ===== Разработки (патенты) ===== */
