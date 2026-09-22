@@ -505,20 +505,24 @@ const modelWrap    = document.getElementById('modal-model-wrap');
 
 function openModal({ imgSrc, modelSrc, title, extraText }) {
   if (modelSrc) {
+    // Режим 3D-модели: картинка и текст скрыты, показывается только модель
     modalImg.hidden = true;
     modalImg.removeAttribute('src');
     modelWrap.hidden = false;
     modalModel.setAttribute('src', modelSrc);
+    modalText.hidden = true;
+    modalText.innerHTML = '';
   } else {
+    // Режим картинки: модель скрыта, показываются изображение и описание
     modelWrap.hidden = true;
     modalModel.removeAttribute('src');
     modalImg.hidden = false;
     modalImg.src = imgSrc;
     modalImg.alt = title;
+    modalText.hidden = false;
+    modalText.innerHTML =
+      `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
   }
-
-  modalText.innerHTML =
-    `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
 
   modal.showModal();
   document.body.style.overflow = 'hidden';
@@ -530,6 +534,7 @@ modal.addEventListener('close', () => {
   modalImg.hidden = false;
   modelWrap.hidden = true;
   modalModel.removeAttribute('src');
+  modalText.hidden = false;      // ← добавлено
 });
 
   // Клик вне контента закрывает (по клику на ::backdrop)
