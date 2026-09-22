@@ -10,6 +10,61 @@
   <meta property="og:image" content="img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tim-dpk.github.io/">
+
+  <!-- Доп. SEO -->
+  <meta name="theme-color" content="#a3c2f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Open Graph: тип -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tim-dpk.github.io/">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ВиТИМ",
+    "alternateName": "Водоснабжение и технологии информационного моделирования",
+    "url": "https://tim-dpk.github.io/",
+    "logo": "https://tim-dpk.github.io/img/favicon-180.png",
+    "description": "Разработка ПО для обмена данными между САПР и расчётными программами инженерных систем на основе IFC.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "наб. Северной Двины, 22, ауд. 2418",
+      "addressLocality": "Архангельск",
+      "addressCountry": "RU"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+7-952-250-70-69",
+      "email": "duryagin1995@yandex.ru",
+      "contactType": "customer support",
+      "availableLanguage": "Russian"
+    }],
+    "sameAs": [
+      "https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-2.7"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ВиТИМ",
+    "applicationCategory": "EngineeringApplication",
+    "operatingSystem": "Windows",
+    "description": "ПО для интеграции САПР с расчётными модулями инженерных систем через IFC.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" }
+  }
+  </script>
+
   <!-- Предзагрузка шрифтов (локально) -->
   <link rel="preload" href="fonts/ubuntu.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/open-sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,13 +77,28 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💧%3C/text%3E%3C/svg%3E">
+
+<!-- Web component для интерактивной 3D-модели -->
+<script type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
 </head>
 <body>
 
 <header class="sticky-header">
   <div class="container header-container">
-    <a href="#" class="header-logo">ВиТИМ</a>
-    <nav class="header-nav">
+    <a href="#" class="header-logo" aria-label="ВиТИМ — на главную">ВиТИМ</a>
+
+    <button class="burger"
+            id="burger"
+            type="button"
+            aria-label="Открыть меню"
+            aria-expanded="false"
+            aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="header-nav" id="primary-nav" aria-label="Основная навигация">
       <a href="#about">О проекте</a>
       <a href="#steps">Возможности</a>
       <a href="#tech">Технологии</a>
@@ -37,7 +107,14 @@
       <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">Тёмная тема</button>
+
+    <div class="header-actions">
+      <button id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Переключить тему"
+              aria-pressed="false">Тёмная тема</button>
+    </div>
   </div>
 </header>
 
@@ -45,10 +122,37 @@
   <main class="site-main">
     <!-- Hero section (бывший call-to-action) -->
     <section class="hero">
-      <div class="container">
-        <h1 class="hero__title">ВиТИМ</h1>
-        <p class="hero__subtitle">Водоснабжение и технологии информационного моделирования</p>
-        <a href="https://disk.yandex.ru/i/dcQyi7kxse2KVQ" class="button button--primary" target="_blank" rel="noopener">Скачать информационный лист</a>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">ВиТИМ</h1>
+          <p class="hero__subtitle">Водоснабжение и технологии информационного моделирования</p>
+          <a href="https://disk.yandex.ru/i/dcQyi7kxse2KVQ"
+           class="button button--primary"
+           target="_blank" rel="noopener">Скачать информационный лист</a>
+       </div>
+
+       <div class="hero__viewer">
+         <model-viewer
+            src="models/drainage-pump.glb"
+            poster="img/hero-model-poster.jpg"
+            alt="Интерактивная 3D-модель элемента инженерной системы"
+            camera-controls
+            auto-rotate
+            auto-rotate-delay="2000"
+            rotation-per-second="20deg"
+            shadow-intensity="1"
+            exposure="1"
+            environment-image="neutral"
+            loading="lazy"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            touch-action="pan-y">
+            <div slot="poster" class="hero__viewer-fallback">
+             <span aria-hidden="true">💧</span>
+             <p>Интерактивная 3D-модель</p>
+           </div>
+         </model-viewer>
+       </div>
       </div>
     </section>
 
@@ -356,65 +460,129 @@
   </footer>
 
 <!-- Модальное окно -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <img id="modal-img" class="modal-img" src="" alt="">
-      <div id="modal-text" class="modal-text"></div>
-    </div>
-  </div>
+  <dialog id="modal"
+          class="modal"
+          aria-labelledby="modal-title"
+          aria-modal="true">
+    <form method="dialog" class="modal__form">
+      <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
+    </form>
+    <img id="modal-img" class="modal-img" src="" alt="">
+    <div id="modal-text" class="modal-text"></div>
+  </dialog>
 
-  <script>
-  // Модальное окно для карточек партнёров и патентов
-  const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalText = document.getElementById('modal-text');
-  const closeBtn = document.querySelector('.modal-close');
+<script>
+(function () {
+  'use strict';
+
+  /* ============ 1. Модальное окно (нативный <dialog>) ============ */
+  const modal      = document.getElementById('modal');
+  const modalImg   = document.getElementById('modal-img');
+  const modalText  = document.getElementById('modal-text');
 
   function openModal(imgSrc, title, extraText) {
-    modal.style.display = 'block';
     modalImg.src = imgSrc;
-    modalText.innerHTML = `<h3 style="margin-top:0;">${title}</h3><p>${extraText}</p>`;
+    modalImg.alt = title;
+    modalText.innerHTML =
+      `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
   }
 
-// Назначаем обработчики на карточки членов команды
-document.querySelectorAll('.team-member').forEach(card => {
-  card.addEventListener('click', () => {
-    const img = card.querySelector('.team-member__photo img').src;   // ← исправлено
-    const title = card.querySelector('.team-member__name').innerText;
-    const desc = card.querySelector('.team-member__desc').innerText;
-    openModal(img, title, desc);
+  modal.addEventListener('close', () => {
+    document.body.style.overflow = '';
+    modalImg.src = '';
   });
-  card.style.cursor = 'pointer';
-});
-    
-  // Назначаем обработчики на карточки партнёров
+
+  // Клик вне контента закрывает (по клику на ::backdrop)
+  modal.addEventListener('click', (e) => {
+    const rect = modal.getBoundingClientRect();
+    const inDialog =
+      e.clientX >= rect.left && e.clientX <= rect.right &&
+      e.clientY >= rect.top  && e.clientY <= rect.bottom;
+    if (!inDialog) modal.close();
+  });
+
+  /* ============ 2. Делаем карточки доступными с клавиатуры ============ */
+  function makeInteractive(card, handler) {
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', handler);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        handler();
+      }
+    });
+  }
+
+  // Команда
+  document.querySelectorAll('.team-member').forEach(card => {
+    makeInteractive(card, () => {
+      const img   = card.querySelector('.team-member__photo img').src;
+      const title = card.querySelector('.team-member__name').innerText;
+      const desc  = card.querySelector('.team-member__desc').innerText;
+      openModal(img, title, desc);
+    });
+  });
+
+  // Партнёры
   document.querySelectorAll('.partner-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.partner-card__image').src;
+    makeInteractive(card, () => {
+      const img   = card.querySelector('.partner-card__image').src;
       const title = card.querySelector('.partner-card__title').innerText;
-      const type = card.querySelector('.partner-card__type').innerText;
+      const type  = card.querySelector('.partner-card__type').innerText;
       openModal(img, title, type);
     });
-    card.style.cursor = 'pointer';
   });
 
-  // Назначаем обработчики на карточки патентов
+  // Патенты
   document.querySelectorAll('.patent-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const img = card.querySelector('.patent-card__image').src;
-      const title = card.querySelector('.patent-card__title').innerText;
+    makeInteractive(card, () => {
+      const img    = card.querySelector('.patent-card__image').src;
+      const title  = card.querySelector('.patent-card__title').innerText;
       const number = card.querySelector('.patent-card__number').innerText;
-      const desc = card.querySelector('.patent-card__desc').innerText;
+      const desc   = card.querySelector('.patent-card__desc').innerText;
       openModal(img, title, `${number}<br><br>${desc}`);
     });
-    card.style.cursor = 'pointer';
   });
 
-  // Закрытие по крестику
-  closeBtn.onclick = () => modal.style.display = 'none';
-  // Закрытие по клику вне контента
-  window.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+  /* ============ 3. Бургер-меню ============ */
+  const burger = document.getElementById('burger');
+  const nav    = document.getElementById('primary-nav');
+
+  function closeNav() {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Открыть меню');
+    nav.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+  }
+
+  function openNav() {
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Закрыть меню');
+    nav.classList.add('is-open');
+    document.body.classList.add('nav-open');
+  }
+
+  burger.addEventListener('click', () => {
+    const isOpen = burger.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeNav() : openNav();
+  });
+
+  // Закрывать при клике по ссылке
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+
+  // Закрывать по Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) closeNav();
+  });
+
+  // Сброс при переходе на десктоп
+  window.matchMedia('(min-width: 901px)').addEventListener('change', (e) => {
+    if (e.matches) closeNav();
+  });
+})();
 </script>
     
   <script>
@@ -434,51 +602,76 @@ document.querySelectorAll('.team-member').forEach(card => {
     });
   </script>
 
-  <script>
-  (function() {
-    const toggleBtn = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement; // <html>
-    
-    // Функция применения темы
-    function setTheme(theme) {
-      if (theme === 'dark') {
-        htmlElement.classList.add('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = 'Светлая тема';
-      } else {
-        htmlElement.classList.remove('dark-mode');
-        if (toggleBtn) toggleBtn.textContent = 'Тёмная тема';
+<script>
+(function() {
+  const toggleBtn   = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
+
+  // 1. Получение темы
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  // 2. Применение без анимации
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      htmlElement.classList.add('dark-mode');
+      if (toggleBtn) {
+        toggleBtn.textContent = 'Светлая тема';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+        toggleBtn.setAttribute('aria-label', 'Включить светлую тему');
       }
-      localStorage.setItem('theme', theme);
-    }
-    
-    // Получение сохранённой темы или системной
-    function getPreferredTheme() {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark' || saved === 'light') return saved;
-      // Если нет сохранённого – проверить системную тему
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    
-    // Инициализация
-    const initialTheme = getPreferredTheme();
-    setTheme(initialTheme);
-    
-    // Обработчик на кнопку
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const isDark = htmlElement.classList.contains('dark-mode');
-        setTheme(isDark ? 'light' : 'dark');
-      });
-    }
-    
-    // (Опционально) Следить за изменением системной темы, если нет ручного выбора
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      // Только если пользователь явно не выбирал тему (сохранённая отсутствует)
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
+    } else {
+      htmlElement.classList.remove('dark-mode');
+      if (toggleBtn) {
+        toggleBtn.textContent = 'Тёмная тема';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+        toggleBtn.setAttribute('aria-label', 'Включить тёмную тему');
       }
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  // 3. Применение с плавным переходом (для клика)
+  function setTheme(theme) {
+    if (document.startViewTransition && document.visibilityState === 'visible') {
+      document.startViewTransition(() => applyTheme(theme));
+    } else {
+      applyTheme(theme);
+    }
+  }
+
+  // 4. Инициализация — без анимации, чтобы не мигало
+  applyTheme(getPreferredTheme());
+
+  // 5. Клик по кнопке — с анимацией
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = htmlElement.classList.contains('dark-mode');
+      setTheme(isDark ? 'light' : 'dark');
     });
-  })();
+  }
+
+  // 6. Реакция на системную тему, если пользователь не выбирал вручную
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  /* ============ 4. Отключаем авто-вращение 3D при reduced motion ============ */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // model-viewer — custom element, ждём его регистрации
+    customElements.whenDefined('model-viewer').then(() => {
+      document.querySelectorAll('model-viewer').forEach(mv => {
+        mv.removeAttribute('auto-rotate');
+      });
+    });
+  }
+
+})();
 </script>
     
 </body>
