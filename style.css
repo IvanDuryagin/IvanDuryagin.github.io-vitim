@@ -427,7 +427,7 @@ section {
 }
 
 .tech__item a {
-  color: var(--color-dark);
+  color: inherit;                /* ← берёт цвет родителя, т.е. --color-text-muted */
   text-decoration: underline;
   text-underline-offset: 4px;
 }
