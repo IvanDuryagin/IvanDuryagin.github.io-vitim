@@ -121,40 +121,42 @@
   
   <main class="site-main">
     <!-- Hero section (бывший call-to-action) -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <h1 class="hero__title">ВиТИМ</h1>
-          <p class="hero__subtitle">Водоснабжение и технологии информационного моделирования</p>
-          <a href="https://disk.yandex.ru/i/dcQyi7kxse2KVQ"
-           class="button button--primary"
-           target="_blank" rel="noopener">Скачать информационный лист</a>
-       </div>
-
-       <div class="hero__viewer">
-         <model-viewer
-            src="models/drainage-pump.glb"
-            poster="img/hero-model-poster.jpg"
-            alt="Интерактивная 3D-модель элемента инженерной системы"
-            camera-controls
-            auto-rotate
-            auto-rotate-delay="2000"
-            rotation-per-second="20deg"
-            shadow-intensity="1"
-            exposure="1"
-            environment-image="neutral"
-            loading="lazy"
-            ar
-            ar-modes="webxr scene-viewer quick-look"
-            touch-action="pan-y">
-            <div slot="poster" class="hero__viewer-fallback">
-             <span aria-hidden="true">💧</span>
-             <p>Интерактивная 3D-модель</p>
-           </div>
-         </model-viewer>
-       </div>
+<section class="hero">
+  <!-- Фоновый 3D-слой -->
+  <div class="hero__bg" aria-hidden="true">
+    <model-viewer
+      src="models/drainage-pump.glb"
+      poster="img/hero-model-poster.jpg"
+      alt=""
+      camera-controls
+      auto-rotate
+      auto-rotate-delay="1500"
+      rotation-per-second="15deg"
+      shadow-intensity="1"
+      exposure="1"
+      environment-image="neutral"
+      loading="eager"
+      disable-zoom
+      interaction-prompt="none"
+      touch-action="pan-y">
+      <div slot="poster" class="hero__viewer-fallback">
+        <span aria-hidden="true">💧</span>
+        <p>Интерактивная 3D-модель</p>
       </div>
-    </section>
+    </model-viewer>
+  </div>
+
+  <!-- Текстовый слой поверх -->
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <h1 class="hero__title">ВиТИМ</h1>
+      <p class="hero__subtitle">Водоснабжение и технологии информационного моделирования</p>
+      <a href="https://disk.yandex.ru/i/dcQyi7kxse2KVQ"
+         class="button button--primary"
+         target="_blank" rel="noopener">Скачать информационный лист</a>
+    </div>
+  </div>
+</section>
 
     <!-- О главном -->
     <section class="about" id="about">
@@ -375,7 +377,7 @@
       <div class="container">
         <h2 class="section-title section-title--center">Наши разработки</h2>
         <div class="developments__grid">
-          <div class="patent-card">
+          <div class="patent-card" data-model="models/patent3.glb">
             <img src="img/patent3.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026683315" class="patent-card__image" loading="lazy">
             <div class="patent-card__info">
               <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента узла присоединения инженерных систем водоснабжения и теплоснабжения в BIM-модели</h3>
@@ -383,7 +385,7 @@
               <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Зорина В.Н., Сопилов В.В., Починков М.В., Лабудин Б.В.</p>
             </div>
           </div>
-          <div class="patent-card">
+          <div class="patent-card" data-model="models/patent2.glb">
             <img src="img/patent2.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026682980" class="patent-card__image" loading="lazy">
             <div class="patent-card__info">
               <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента водомерного узла системы водоснабжения в BIM-модели</h3>
@@ -391,7 +393,7 @@
               <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Бовыкина Г.В., Сопилов В.В., Лялин Е.В., Лабудин Б.В., Худяков Н.А., Самарханов К.Г.</p>
             </div>
           </div>
-          <div class="patent-card">
+          <div class="patent-card" data-model="models/patent1.glb">
             <img src="img/patent1.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2024690988" class="patent-card__image" loading="lazy">
             <div class="patent-card__info">
               <h3 class="patent-card__title">Программа для создания объемно-пространственного элемента дренажного насоса в BIM-модели</h3>
@@ -460,39 +462,75 @@
   </footer>
 
 <!-- Модальное окно -->
-  <dialog id="modal"
-          class="modal"
-          aria-labelledby="modal-title"
-          aria-modal="true">
-    <form method="dialog" class="modal__form">
-      <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
-    </form>
+<dialog id="modal"
+        class="modal"
+        aria-labelledby="modal-title"
+        aria-modal="true">
+  <form method="dialog" class="modal__form">
+    <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
+  </form>
+
+  <div class="modal-media">
     <img id="modal-img" class="modal-img" src="" alt="">
-    <div id="modal-text" class="modal-text"></div>
-  </dialog>
+
+    <div id="modal-model-wrap" class="modal-model-wrap" hidden>
+      <model-viewer id="modal-model" class="modal-model"
+                    camera-controls
+                    auto-rotate
+                    auto-rotate-delay="800"
+                    rotation-per-second="20deg"
+                    shadow-intensity="1"
+                    exposure="1"
+                    environment-image="neutral"
+                    touch-action="none"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+    </div>
+  </div>
+
+  <div id="modal-text" class="modal-text"></div>
+</dialog>
 
 <script>
 (function () {
   'use strict';
 
   /* ============ 1. Модальное окно (нативный <dialog>) ============ */
-  const modal      = document.getElementById('modal');
-  const modalImg   = document.getElementById('modal-img');
-  const modalText  = document.getElementById('modal-text');
+const modal        = document.getElementById('modal');
+const modalImg     = document.getElementById('modal-img');
+const modalText    = document.getElementById('modal-text');
+const modalModel   = document.getElementById('modal-model');
+const modelWrap    = document.getElementById('modal-model-wrap');
 
-  function openModal(imgSrc, title, extraText) {
+function openModal({ imgSrc, modelSrc, title, extraText }) {
+  if (modelSrc) {
+    modalImg.hidden = true;
+    modalImg.removeAttribute('src');
+    modelWrap.hidden = false;
+    modalModel.setAttribute('src', modelSrc);
+  } else {
+    modelWrap.hidden = true;
+    modalModel.removeAttribute('src');
+    modalImg.hidden = false;
     modalImg.src = imgSrc;
     modalImg.alt = title;
-    modalText.innerHTML =
-      `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
-    modal.showModal();
-    document.body.style.overflow = 'hidden';
   }
 
-  modal.addEventListener('close', () => {
-    document.body.style.overflow = '';
-    modalImg.src = '';
-  });
+  modalText.innerHTML =
+    `<h3 id="modal-title" class="modal__title">${title}</h3><p>${extraText}</p>`;
+
+  modal.showModal();
+  document.body.style.overflow = 'hidden';
+}
+
+modal.addEventListener('close', () => {
+  document.body.style.overflow = '';
+  modalImg.removeAttribute('src');
+  modalImg.hidden = false;
+  modelWrap.hidden = true;
+  modalModel.removeAttribute('src');
+});
 
   // Клик вне контента закрывает (по клику на ::backdrop)
   modal.addEventListener('click', (e) => {
@@ -517,35 +555,44 @@
   }
 
   // Команда
-  document.querySelectorAll('.team-member').forEach(card => {
-    makeInteractive(card, () => {
-      const img   = card.querySelector('.team-member__photo img').src;
-      const title = card.querySelector('.team-member__name').innerText;
-      const desc  = card.querySelector('.team-member__desc').innerText;
-      openModal(img, title, desc);
+document.querySelectorAll('.team-member').forEach(card => {
+  makeInteractive(card, () => {
+    openModal({
+      imgSrc: card.querySelector('.team-member__photo img').src,
+      title:  card.querySelector('.team-member__name').innerText,
+      extraText: card.querySelector('.team-member__desc').innerText,
     });
   });
+});
 
   // Партнёры
-  document.querySelectorAll('.partner-card').forEach(card => {
-    makeInteractive(card, () => {
-      const img   = card.querySelector('.partner-card__image').src;
-      const title = card.querySelector('.partner-card__title').innerText;
-      const type  = card.querySelector('.partner-card__type').innerText;
-      openModal(img, title, type);
+document.querySelectorAll('.partner-card').forEach(card => {
+  makeInteractive(card, () => {
+    openModal({
+      imgSrc: card.querySelector('.partner-card__image').src,
+      title:  card.querySelector('.partner-card__title').innerText,
+      extraText: card.querySelector('.partner-card__type').innerText,
     });
   });
+});
 
   // Патенты
-  document.querySelectorAll('.patent-card').forEach(card => {
-    makeInteractive(card, () => {
-      const img    = card.querySelector('.patent-card__image').src;
-      const title  = card.querySelector('.patent-card__title').innerText;
-      const number = card.querySelector('.patent-card__number').innerText;
-      const desc   = card.querySelector('.patent-card__desc').innerText;
-      openModal(img, title, `${number}<br><br>${desc}`);
+document.querySelectorAll('.patent-card').forEach(card => {
+  makeInteractive(card, () => {
+    const img    = card.querySelector('.patent-card__image').src;
+    const model  = card.dataset.model || '';
+    const title  = card.querySelector('.patent-card__title').innerText;
+    const number = card.querySelector('.patent-card__number').innerText;
+    const desc   = card.querySelector('.patent-card__desc').innerText;
+
+    openModal({
+      imgSrc: img,
+      modelSrc: model,
+      title,
+      extraText: `${number}<br><br>${desc}`,
     });
   });
+});
 
   /* ============ 3. Бургер-меню ============ */
   const burger = document.getElementById('burger');
