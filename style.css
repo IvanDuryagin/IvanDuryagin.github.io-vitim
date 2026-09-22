@@ -626,13 +626,21 @@ section {
   }
 
   .footer__inner {
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
     text-align: center;
   }
 
+  /* На мобильных вместо нагромождения ссылок — только "ВиТИМ 2026" */
+  .footer__logo,
   .footer__nav {
-    justify-content: center;
+    display: none;
+  }
+
+  .footer__copy {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
   }
 
   .steps__list {
