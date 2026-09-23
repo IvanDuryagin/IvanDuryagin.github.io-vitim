@@ -121,6 +121,22 @@ img {
   font-weight: 500;
   transition: color 0.2s;
 }
+
+.header-nav a.is-active {
+  color: var(--color-primary);
+  position: relative;
+}
+.header-nav a.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
 .header-nav a:hover {
   color: var(--color-primary);
 }
@@ -499,8 +515,13 @@ section {
 }
 
 .team-member {
-  flex: 0 0 280px;                     /* фиксированная ширина карточки */
+  flex: 0 0 280px;
   scroll-snap-align: start;
+  background-color: var(--color-light);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition);
 }
 
 /* Стилизация скроллбара (WebKit) */
@@ -519,14 +540,6 @@ section {
   .team-member {
     flex: 0 0 240px;                   /* компактнее на узких экранах */
   }
-}
-
-.team-member {
-  background-color: var(--color-light);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition);
 }
 
 .team-member:hover {
@@ -749,6 +762,11 @@ section {
 .partner-card {
   flex: 0 0 300px;
   scroll-snap-align: start;
+  background-color: var(--color-gray-light);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .partners__grid::-webkit-scrollbar {
@@ -766,14 +784,6 @@ section {
   .partner-card {
     flex: 0 0 260px;
   }
-}
-
-.partner-card {
-  background-color: var(--color-gray-light);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .partner-card:hover {
@@ -1109,3 +1119,16 @@ section {
   }
   .section-fade { opacity: 1; transform: none; }
 }
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-dark));
+  z-index: 1100;
+  width: 0;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
