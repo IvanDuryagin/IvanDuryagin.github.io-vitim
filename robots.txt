@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ivanduryagin.github.io/IvanDuryagin.github.io-vitim/sitemap.xml
