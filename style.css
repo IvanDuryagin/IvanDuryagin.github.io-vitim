@@ -78,6 +78,10 @@ img {
   display: block;
 }
 
+picture {
+  display: contents;
+}
+
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
