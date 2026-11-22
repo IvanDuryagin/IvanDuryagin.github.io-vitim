@@ -613,6 +613,10 @@ section {
   width: 48px;
   height: 48px;
   flex-shrink: 0;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-item__title {
@@ -1136,3 +1140,415 @@ section {
   pointer-events: none;
 }
 
+/* ===== Новые стили для раздела "Наши разработки" ===== */
+.developments__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Чуть увеличили отступ между двумя блоками */
+  margin-bottom: 40px;
+}
+
+.development-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 650px;
+  width: 100%; /* Чтобы блок занимал всю доступную ширину до max-width */
+}
+
+.development-desc {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Обертка для кнопки и списка */
+.download-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Ограничиваем ширину группы */
+}
+
+/* ===== Стили для выпадающего списка ===== */
+.library-dropdown {
+  width: 100%;
+  margin-top: 8px; /* Небольшой отступ от основной кнопки */
+}
+
+.library-dropdown__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.08); /* Полупрозрачный фон */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Скругленные углы, чтобы было похоже на кнопку */
+  color: var(--color-dark);
+  font-family: var(--font-title);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* Убираем стандартный маркер (треугольник) */
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.library-dropdown__summary::-webkit-details-marker {
+  display: none; /* Убираем маркер в Safari/Chrome */
+}
+
+.library-dropdown__summary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Создаем красивую стрелочку через псевдоэлемент */
+.library-dropdown__summary::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg); /* Смотрим вниз */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 15px;
+}
+
+/* Переворачиваем стрелочку при открытии */
+.library-dropdown[open] .library-dropdown__summary::after {
+  transform: rotate(-135deg); /* Смотрим вверх */
+}
+
+/* ===== Анимация раскрытия (Современный CSS) ===== */
+.library-dropdown__content {
+  display: grid;
+  grid-template-rows: 0fr; /* Начальная высота 0 */
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.library-dropdown[open] .library-dropdown__content {
+  grid-template-rows: 1fr; /* Конечная высота (по контенту) */
+}
+
+.library-dropdown__inner {
+  overflow: hidden; /* Скрываем контент, пока высота 0 */
+}
+
+/* Внутренние отступы для списка */
+.library-list {
+  columns: 2; /* Две колонки на десктопе */
+  column-gap: 30px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: left; 
+}
+
+/* НОВОЕ: Запрещаем разрывать элемент списка между колонками */
+.library-list li {
+  break-inside: avoid;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .library-list { 
+    columns: 1; /* На мобильных одна колонка */
+  }
+  .library-dropdown__summary {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Темная тема для новых элементов */
+.dark-mode .development-desc {
+  color: rgba(240, 240, 240, 0.75); 
+}
+.dark-mode .library-dropdown__summary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+}
+.dark-mode .library-dropdown__summary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Объединенная кнопка со списком (Split Action) ===== */
+.split-action {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  /* Используем drop-shadow, чтобы тень облегала форму кнопок и списка */
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Основная кнопка (левая часть) */
+.split-action__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 32px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: var(--font-title);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  /* Скругляем только левую сторону */
+  border-radius: var(--border-radius-btn) 0 0 var(--border-radius-btn);
+  position: relative;
+  z-index: 2; /* Кнопка будет перекрывать список */
+}
+
+.split-action__btn:hover {
+  opacity: 0.85;
+}
+
+/* Добавляем синий фон и темный текст в темной теме */
+.dark-mode .split-action__btn:hover {
+  background-color: var(--color-primary);
+  color: #121212;
+  opacity: 1; /* Убираем прозрачность, чтобы цвет был сочным */
+}
+
+/* МАГИЯ: display: contents заставляет браузер "игнорировать" обертку details, 
+   и ее внутренние элементы (summary и div) становятся прямыми участниками сетки Grid */
+.split-action__details {
+  display: contents; 
+}
+
+/* Кнопка-переключатель (правая часть) */
+.split-action__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 1rem;
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+  transition: background 0.2s;
+  user-select: none;
+  /* Скругляем только правую сторону */
+  border-radius: 0 var(--border-radius-btn) var(--border-radius-btn) 0;
+  position: relative;
+  z-index: 2; /* Кнопка будет перекрывать список */
+}
+
+/* Добавляем обводку при клике с клавиатуры (Tab) */
+.split-action__toggle:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+}
+
+.split-action__toggle::-webkit-details-marker {
+  display: none; /* Скрываем маркер в Safari */
+}
+
+.split-action__toggle:hover {
+  background-color: #333; /* Подсветка при наведении в светлой теме */
+}
+.dark-mode .split-action__toggle:hover {
+  background-color: var(--color-primary);
+  color: #121212;
+}
+
+/* Анимация стрелочки */
+.split-action__icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.split-action__details[open] .split-action__icon {
+  transform: rotate(180deg);
+}
+
+/* Контент выпадающего списка */
+.split-action__content {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color-light);
+  border-radius: 0; /* Убираем скругление, делаем прямым */
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* Уводим список на задний план, под кнопку */
+  margin-top: -20px; /* Задвигаем список под кнопку, чтобы скрыть стык */
+}
+
+.split-action__details[open] .split-action__content {
+  grid-template-rows: 1fr; /* Раскрытие по высоте контента */
+}
+
+.split-action__content .library-dropdown__inner {
+  overflow: hidden; /* Скрываем контент при 0fr */
+}
+
+/* Стили самого списка */
+.split-action__content .library-list {
+  columns: 2;
+  column-gap: 30px;
+  padding: 36px 30px 20px 30px; /* Верхний отступ больше (36px), т.к. часть списка спрятана под кнопкой */
+  margin: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: left; 
+  width: 100%;
+}
+
+.split-action__content .library-list li {
+  break-inside: avoid; /* Запрещаем разрывать элемент между колонками */
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .split-action {
+    grid-template-columns: 1fr; /* Складываем кнопки в столбик */
+  }
+  
+  .split-action__btn {
+    /* Верхняя кнопка скругляется сверху */
+    border-radius: var(--border-radius-btn) var(--border-radius-btn) 0 0;
+  }
+  
+  .split-action__toggle {
+    /* Нижняя кнопка скругляется снизу */
+    border-radius: 0 0 var(--border-radius-btn) var(--border-radius-btn);
+    border-left: none;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+    padding: 12px 24px;
+    justify-content: center;
+  }
+  
+  .split-action__content .library-list { 
+    columns: 1; 
+  }
+}
+
+/* Темная тема */
+.dark-mode .split-action__content {
+  background: #1a1a1a; /* Темный фон для панели */
+}
+.dark-mode .split-action__content .library-list {
+  color: rgba(240, 240, 240, 0.75);
+}
+
+/* ===== Стили для кнопки Смотреть (сброс стилей button) ===== */
+button.split-action__toggle {
+  border: none;
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+/* ===== Модальное окно галереи ===== */
+.gallery-modal {
+  width: min(95vw, 1000px);
+  max-height: 90vh;
+  flex-direction: column;
+  background: var(--color-light);
+}
+
+.gallery-modal[open] {
+  display: flex;
+}
+
+.gallery-header {
+  padding: 24px 24px 0;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px 24px 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.gallery-container::-webkit-scrollbar { height: 8px; }
+.gallery-container::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); border-radius: 4px; }
+.gallery-container::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
+
+.gallery-item {
+  flex: 0 0 85%; /* Занимает 85% ширины, чтобы было видно край следующей картинки */
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-gray-light);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.gallery-caption {
+  padding: 20px;
+  text-align: left;
+}
+
+.gallery-caption h4 {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--color-dark);
+}
+
+.gallery-caption p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Адаптив для галереи (на больших экранах показываем больше) */
+@media (min-width: 768px) {
+  .gallery-item { flex: 0 0 70%; }
+}
+@media (min-width: 1024px) {
+  .gallery-item { flex: 0 0 60%; }
+}
+
+/* Темная тема для галереи */
+.dark-mode .gallery-modal {
+  background: #242424;
+}
+.dark-mode .gallery-item {
+  background: #2a2a2a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .gallery-item img {
+  border-bottom-color: rgba(255,255,255,0.1);
+}
+.dark-mode .gallery-caption h4 {
+  color: var(--color-text);
+}
+.dark-mode .gallery-container::-webkit-scrollbar-track { 
+  background: rgba(255,255,255,0.1); 
+}

@@ -48,7 +48,7 @@
       "availableLanguage": "Russian"
     }],
     "sameAs": [
-      "https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-2.7"
+      "https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-4.0.0"
     ]
   }
   </script>
@@ -174,11 +174,10 @@
 
     <nav class="header-nav" id="primary-nav" aria-label="Основная навигация">
       <a href="#about">О проекте</a>
-      <a href="#steps">Возможности</a>
+      <a href="#developments">Разработки</a>
       <a href="#tech">Технологии</a>
       <a href="#team">Команда</a>
       <a href="#partners">Партнёры</a>
-      <a href="#developments">Разработки</a>
       <a href="#contacts">Контакты</a>
     </nav>
 
@@ -254,83 +253,122 @@
       </div>
     </section>
 
-    <!-- Возможности нашего продукта -->
-    <section class="steps" id="steps">
+    <!-- Наши разработки (патенты) -->
+    <section class="developments" id="developments">
       <div class="container">
-        <h2 class="section-title">Возможности нашего продукта</h2>
-        <div class="steps__list">
-          <article class="step-card">
+        <h2 class="section-title section-title--center">Наши разработки</h2>
+        
+        <!-- НОВЫЙ БЛОК: Кнопки скачивания и состав библиотеки -->
+        <!-- Блок кнопок скачивания -->
+        <div class="developments__actions">
+          
+          <!-- Объединенный блок: Библиотека + Список -->
+          <div class="development-item">
+            <div class="split-action">
+              <!-- Основная кнопка скачивания -->
+              <a href="library/bim-library.zip" class="split-action__btn" download>Скачать BIM-библиотеку ArchiCAD</a>
+              
+              <!-- Выпадающий список -->
+              <details class="split-action__details">
+                <summary class="split-action__toggle" aria-label="Показать состав библиотеки">
+                  <span>Состав</span>
+                  <!-- Иконка стрелочки (SVG) -->
+                  <svg class="split-action__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </summary>
+                <div class="split-action__content">
+                  <div class="library-dropdown__inner">
+                    <ul class="library-list">
+                      <li>Квартирный водомерный узел.gsm</li>
+                      <li>ПВХ НПВХ Вакуумный клапан.gsm</li>
+                      <li>ПВХ НПВХ Крестовина двухплоскостная.gsm</li>
+                      <li>ПВХ НПВХ Крестовина.gsm</li>
+                      <li>ПВХ НПВХ Отвод.gsm</li>
+                      <li>ПВХ НПВХ Пробка.gsm</li>
+                      <li>ПВХ НПВХ Ревизия.gsm</li>
+                      <li>ПВХ НПВХ Редукция.gsm</li>
+                      <li>ПВХ НПВХ Тройник.gsm</li>
+                      <li>ПВХ НПВХ Труба.gsm</li>
+                      <li>ПНД Крестовина двухплоскостная.gsm</li>
+                      <li>ПНД Крестовина.gsm</li>
+                      <li>ПНД Отвод.gsm</li>
+                      <li>ПНД Тройник.gsm</li>
+                      <li>ППРС Крестовина двухплоскостная.gsm</li>
+                      <li>ППРС Крестовина.gsm</li>
+                      <li>ППРС Муфта.gsm</li>
+                      <li>ППРС Отвод.gsm</li>
+                      <li>ППРС ПНД Труба.gsm</li>
+                      <li>ППРС Тройник.gsm</li>
+                      <li>Стальная крестовина.gsm</li>
+                      <li>Стальная Труба.gsm</li>
+                      <li>Стальной отвод.gsm</li>
+                      <li>Стальной переход.gsm</li>
+                      <li>Стальной тройник.gsm</li>
+                      <li>Узел присоединения стояков.gsm</li>
+                    </ul>
+                  </div>
+                </div>
+              </details>
+            </div>
+            <p class="development-desc">Библиотека параметрических элементов (26 семейств) для проектирования систем водоснабжения и водоотведения в ArchiCAD.</p>
+          </div>
+
+          <!-- Второй блок: Программа + Галерея -->
+          <div class="development-item">
+            <div class="split-action">
+              <!-- Основная кнопка скачивания -->
+              <a href="programm/ViTIM2026.zip" class="split-action__btn" download>Скачать программу для расчёта</a>
+              
+              <!-- Кнопка открытия галереи -->
+              <button class="split-action__toggle" id="open-gallery-btn" aria-label="Посмотреть скриншоты программы">
+                <span>Интерфейс</span>
+              </button>
+            </div>
+            <p class="development-desc">Приложение для выполнения расчётов инженерных систем с возможностью интеграции с САПР через формат IFC.</p>
+          </div>
+
+        </div>
+        <!-- КОНЕЦ НОВОГО БЛОКА -->
+
+        <div class="developments__grid">
+          <div class="patent-card" data-model="models/patent3.glb">
             <picture>
-              <source srcset="img/step1.webp" type="image/webp">
-              <img src="img/step1.png" alt="1. Интеграция с популярными САПР"
-              class="step-card__image" width="600" height="600"
+              <source srcset="img/patent3.webp" type="image/webp">
+              <img src="img/patent3.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026683315"
+              class="patent-card__image" width="600" height="840"
               loading="lazy" decoding="async">
             </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">1. Интеграция с популярными САПР</h3>
-              <p class="step-card__desc">Поддержка интеграции с ведущими САПР для лёгкого импорта и экспорта.</p>
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента узла присоединения инженерных систем водоснабжения и теплоснабжения в BIM-модели</h3>
+              <div class="patent-card__number">Свидетельство № 2026683315 от 30.07.2026</div>
+              <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Зорина В.Н., Сопилов В.В., Починков М.В., Лабудин Б.В.</p>
             </div>
-          </article>
-          <article class="step-card">
+          </div>
+          <div class="patent-card" data-model="models/patent2.glb">
             <picture>
-              <source srcset="img/step2.webp" type="image/webp">
-              <img src="img/step2.png" alt="2. Преобразование форматов"
-              class="step-card__image" width="600" height="600"
+              <source srcset="img/patent2.webp" type="image/webp">
+              <img src="img/patent2.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026682980"
+              class="patent-card__image" width="600" height="840"
               loading="lazy" decoding="async">
             </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">2. Преобразование форматов</h3>
-              <p class="step-card__desc">Поддержка преобразования данных из одного формата в другой для обеспечения совместимости.</p>
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента водомерного узла системы водоснабжения в BIM-модели</h3>
+              <div class="patent-card__number">Свидетельство № 2026682980 от 27.07.2026</div>
+              <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Бовыкина Г.В., Сопилов В.В., Лялин Е.В., Лабудин Б.В., Худяков Н.А., Самарханов К.Г.</p>
             </div>
-          </article>
-          <article class="step-card">
-          <picture>
-            <source srcset="img/step3.webp" type="image/webp">
-            <img src="img/step3.png" alt="3. Интеграция с BIM"
-            class="step-card__image" width="600" height="600"
-            loading="lazy" decoding="async">
-          </picture>            
-          <div class="step-card__body">
-              <h3 class="step-card__title">3. Интеграция с BIM</h3>
-              <p class="step-card__desc">Поддержка интеграции с BIM-технологиями для создания комплексных моделей.</p>
-            </div>
-          </article>
-          <article class="step-card">
+          </div>
+          <div class="patent-card" data-model="models/patent1.glb">
             <picture>
-              <source srcset="img/step4.webp" type="image/webp">
-              <img src="img/step4.png" alt="4. Расчётные модули"
-              class="step-card__image" width="600" height="600"
+              <source srcset="img/patent1.webp" type="image/webp">
+              <img src="img/patent1.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2024690988"
+              class="patent-card__image" width="600" height="840"
               loading="lazy" decoding="async">
             </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">4. Расчётные модули</h3>
-              <p class="step-card__desc">Встроенные модули для выполнения расчётов инженерных систем.</p>
+            <div class="patent-card__info">
+              <h3 class="patent-card__title">Программа для создания объемно-пространственного элемента дренажного насоса в BIM-модели</h3>
+              <div class="patent-card__number">Свидетельство № 2024690988 от 18.12.2024</div>
+              <p class="patent-card__desc">Сопилов В.В., Дурягин И.А., Лабудин Б.В.</p>
             </div>
-          </article>
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step5.webp" type="image/webp">
-              <img src="img/step5.png" alt="5. Автоматизация процессов"
-              class="step-card__image" width="600" height="600"
-              loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">5. Автоматизация процессов</h3>
-              <p class="step-card__desc">Автоматизация рутинных задач, таких как создание отчётов и документации.</p>
-            </div>
-          </article>
-          <article class="step-card">
-            <picture>
-              <source srcset="img/step6.webp" type="image/webp">
-              <img src="img/step6.png" alt="6. Безопасность данных"
-              class="step-card__image" width="600" height="600"
-              loading="lazy" decoding="async">
-            </picture>
-            <div class="step-card__body">
-              <h3 class="step-card__title">6. Безопасность данных</h3>
-              <p class="step-card__desc">Обеспечение защиты конфиденциальной информации и данных.</p>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -354,7 +392,7 @@
           </div>
           <div class="tech__item">
             <dt>Open source</dt>
-            <dd><a href="https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-2.7" target="_blank" rel="noopener">https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-2.7</a></dd>
+            <dd><a href="https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-4.0.0" target="_blank" rel="noopener">https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-4.0.0</a></dd>
           </div>
         </dl>
       </div>
@@ -364,7 +402,7 @@
     <section class="cta-secondary">
       <div class="container container--narrow">
         <h2 class="section-title section-title--center">Принять участие в разработке!</h2>
-        <a href="https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-2.7" class="button button--primary button--center" target="_blank" rel="noopener">Репозиторий проекта на GitHub</a>
+        <a href="https://github.com/IvanDuryagin/The-calculation-of-water-supply-systems-vitim-4.0.0" class="button button--primary button--center" target="_blank" rel="noopener">Репозиторий проекта на GitHub</a>
       </div>
     </section>
 
@@ -529,54 +567,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Наши разработки (патенты) -->
-    <section class="developments" id="developments">
-      <div class="container">
-        <h2 class="section-title section-title--center">Наши разработки</h2>
-        <div class="developments__grid">
-          <div class="patent-card" data-model="models/patent3.glb">
-            <picture>
-              <source srcset="img/patent3.webp" type="image/webp">
-              <img src="img/patent3.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026683315"
-              class="patent-card__image" width="600" height="840"
-              loading="lazy" decoding="async">
-            </picture>
-            <div class="patent-card__info">
-              <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента узла присоединения инженерных систем водоснабжения и теплоснабжения в BIM-модели</h3>
-              <div class="patent-card__number">Свидетельство № 2026683315 от 30.07.2026</div>
-              <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Зорина В.Н., Сопилов В.В., Починков М.В., Лабудин Б.В.</p>
-            </div>
-          </div>
-          <div class="patent-card" data-model="models/patent2.glb">
-            <picture>
-              <source srcset="img/patent2.webp" type="image/webp">
-              <img src="img/patent2.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2026682980"
-              class="patent-card__image" width="600" height="840"
-              loading="lazy" decoding="async">
-            </picture>
-            <div class="patent-card__info">
-              <h3 class="patent-card__title">Программа для создания объёмно-пространственного элемента водомерного узла системы водоснабжения в BIM-модели</h3>
-              <div class="patent-card__number">Свидетельство № 2026682980 от 27.07.2026</div>
-              <p class="patent-card__desc">Дурягин И.А., Попов Е.В., Бовыкина Г.В., Сопилов В.В., Лялин Е.В., Лабудин Б.В., Худяков Н.А., Самарханов К.Г.</p>
-            </div>
-          </div>
-          <div class="patent-card" data-model="models/patent1.glb">
-            <picture>
-              <source srcset="img/patent1.webp" type="image/webp">
-              <img src="img/patent1.jpeg" alt="Свидетельство о регистрации программы для ЭВМ RU 2024690988"
-              class="patent-card__image" width="600" height="840"
-              loading="lazy" decoding="async">
-            </picture>
-            <div class="patent-card__info">
-              <h3 class="patent-card__title">Программа для создания объемно-пространственного элемента дренажного насоса в BIM-модели</h3>
-              <div class="patent-card__number">Свидетельство № 2024690988 от 18.12.2024</div>
-              <p class="patent-card__desc">Сопилов В.В., Дурягин И.А., Лабудин Б.В.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     
     <!-- Контакты -->
     <section class="contacts" id="contacts">
@@ -584,14 +574,18 @@
         <h2 class="section-title">Контакты</h2>
         <div class="contacts__grid">
           <div class="contact-item">
-            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">🏠</div>
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
             <div class="contact-item__content">
               <h3 class="contact-item__title">Адрес</h3>
               <p>г. Архангельск, набережная Северной Двины 22, ауд. 2418 (кафедра "Инженерных конструкций, архитектуры и графики", САФУ им М.В. Ломоносова)</p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-item__icon" style="font-size: 2.5rem; line-height: 1;">📧</div>
+            <div class="contact-item__icon">
+              <svg viewBox="0 0 24 24" width="100%" height="100%" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
             <div class="contact-item__content">
               <h3 class="contact-item__title">Свяжитесь с нами</h3>
               <p>+7 (952) 250 70 69<br>duryagin1995@yandex.ru</p>
@@ -606,7 +600,7 @@
     <section class="map">
       <div class="map__container">
         <iframe 
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A9656a015b252f015a0b6656f6b3f0c5ac35fe5002d817dbff61744ae1c24b570&amp;source=constructor" 
+          src="https://widgets.2gis.com/widget?type=firmsonmap&options=%7B%22pos%22%3A%7B%22lat%22%3A64.534016%2C%22lon%22%3A40.515834%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22arkhangelsk%22%7D%7D" 
           width="100%" 
           height="320" 
           frameborder="0" 
@@ -623,16 +617,60 @@
         <span class="footer__logo">ВиТИМ</span>
         <nav class="footer__nav">
           <a href="#about">О проекте</a>
-          <a href="#steps">Возможности</a>
+          <a href="#developments">Разработки</a>
           <a href="#tech">Технологии</a>
           <a href="#team">Команда</a>
           <a href="#partners">Партнёры</a>
-          <a href="#developments">Разработки</a>
         </nav>
         <small class="footer__copy">ВиТИМ 2026</small>
       </div>
     </div>
   </footer>
+
+<!-- Модальное окно галереи программы -->
+<dialog id="gallery-modal" class="modal gallery-modal" aria-labelledby="gallery-title">
+  <form method="dialog" class="modal__form">
+    <button class="modal-close" type="submit" aria-label="Закрыть окно">&times;</button>
+  </form>
+
+  <div class="gallery-header">
+    <h3 id="gallery-title" class="modal__title">Интерфейс программы ВиТИМ</h3>
+  </div>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="img/program1.webp" alt="Таблица результатов расчета" loading="lazy">
+      <div class="gallery-caption">
+        <h4>Результаты расчёта</h4>
+        <p>Детализированная таблица с параметрами участков, расходами, диаметрами и потерями напора.</p>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="img/program4.webp" alt="Графики расходов по участкам" loading="lazy">
+      <div class="gallery-caption">
+        <h4>Графики по участкам</h4>
+        <p>Наглядная визуализация распределения расходов и скоростей по ветвям сети.</p>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="img/program2.webp" alt="Схема сети и 3D визуализация" loading="lazy">
+      <div class="gallery-caption">
+        <h4>Интерактивная схема</h4>
+        <p>Удобный редактор для построения сети, указания длин и диаметров трубопроводов.</p>
+      </div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="img/program3.webp" alt="Параметры нагрузок" loading="lazy">
+      <div class="gallery-caption">
+        <h4>Параметры и нагрузки</h4>
+        <p>Сводные данные по потребителям, секундным и часовым вероятностям, а также тепловым нагрузкам.</p>
+      </div>
+    </div>
+  </div>
+</dialog>
 
 <!-- Модальное окно -->
 <dialog id="modal"
@@ -668,6 +706,30 @@
 <script>
 (function () {
   'use strict';
+
+  /* ============ 0. Модальное окно галереи ============ */
+  const galleryModal = document.getElementById('gallery-modal');
+  const openGalleryBtn = document.getElementById('open-gallery-btn');
+
+  if (openGalleryBtn && galleryModal) {
+    openGalleryBtn.addEventListener('click', () => {
+      galleryModal.showModal();
+      document.body.style.overflow = 'hidden';
+    });
+
+    galleryModal.addEventListener('close', () => {
+      document.body.style.overflow = '';
+    });
+
+    // Закрытие по клику вне контента
+    galleryModal.addEventListener('click', (e) => {
+      const rect = galleryModal.getBoundingClientRect();
+      const inDialog =
+        e.clientX >= rect.left && e.clientX <= rect.right &&
+        e.clientY >= rect.top  && e.clientY <= rect.bottom;
+      if (!inDialog) galleryModal.close();
+    });
+  }
 
   /* ============ 1. Модальное окно (нативный <dialog>) ============ */
 const modal        = document.getElementById('modal');
